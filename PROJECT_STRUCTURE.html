@@ -1,0 +1,383 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-none.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .bordered-element-rounded {
+            border: 1px solid #c4c4c4;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .emphasis {
+            color: inherit;
+            font-weight: inherit;
+            font-style: italic;
+        }
+        
+
+        .flex {
+            display: flex;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        .prompt {
+            flex-direction: row;
+            letter-spacing: .0015em;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+
+        .prompt-content {
+            padding: 15px;
+            overflow: hidden;
+            flex: 1 1 auto;
+        }
+        
+
+        .prompt-content-p p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prompt-icon {
+            flex: 0 0 auto;
+            margin-left: 15px;
+            margin-top: 15px;
+            fill: currentcolor;
+            width: 24px;
+            height: 24px;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .tip {
+            background-color: rgba(25, 25, 28, .05);
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>PROJECT_STRUCTURE</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-126850163">🏗️ HealthPal Backend &mdash; Project Structure Overview</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-126850163"><span class="no-bold">🏗</span>️ HealthPal Backend &mdash; Project Structure Overview</h1><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="-126850163#k9j0cr_12"><span class="control" id="-126850163#k9j0cr_14">Technology Stack:</span> Node.js (Express.js) + MySQL (via Sequelize) <span class="control" id="-126850163#k9j0cr_16">Team Members:</span></p><ul class="list" id="-126850163#k9j0cr_13" start="1"><li class="list-item" id="-126850163#k9j0cr_17"><p id="-126850163#k9j0cr_21"><span class="no-bold">👨</span>&zwj;<span class="no-bold">⚕</span>️ <span class="control" id="-126850163#k9j0cr_22">Yousef Hannani</span> &ndash; Remote Consultations &amp; Authentication</p></li><li class="list-item" id="-126850163#k9j0cr_18"><p id="-126850163#k9j0cr_23"><span class="no-bold">💰</span> <span class="control" id="-126850163#k9j0cr_24">Yazan Jamal</span> &ndash; Sponsorships / Donations &amp; Security Middleware</p></li><li class="list-item" id="-126850163#k9j0cr_19"><p id="-126850163#k9j0cr_25"><span class="no-bold">💊</span> <span class="control" id="-126850163#k9j0cr_26">Hazem Mahameed</span> &ndash; Medication &amp; Equipment Coordination / Logging</p></li><li class="list-item" id="-126850163#k9j0cr_20"><p id="-126850163#k9j0cr_27"><span class="no-bold">🧠</span> <span class="control" id="-126850163#k9j0cr_28">Muath Hassoun</span> &ndash; Health Education &amp; Mental Support / Documentation</p></li></ul></div>
+</blockquote>
+<div class="detached code-block" id="-126850163#k9j0cr_4"><pre><code class="language-none">healthpal-backend/
+├── src/
+│   ├── config/
+│   │   ├── db.js
+│   │   ├── logger.js
+│   │   └── env.js
+│   │
+│   ├── models/
+│   │   ├── user.model.js
+│   │   ├── consultation.model.js
+│   │   ├── donation.model.js
+│   │   ├── medication.model.js
+│   │   ├── education.model.js
+│   │   └── index.js
+│   │
+│   ├── routes/
+│   │   ├── user.routes.js
+│   │   ├── consultation.routes.js
+│   │   ├── donation.routes.js
+│   │   ├── medication.routes.js
+│   │   ├── education.routes.js
+│   │   └── index.js
+│   │
+│   ├── controllers/
+│   │   ├── user.controller.js
+│   │   ├── consultation.controller.js
+│   │   ├── donation.controller.js
+│   │   ├── medication.controller.js
+│   │   ├── education.controller.js
+│   │   └── index.js
+│   │
+│   ├── services/
+│   │   ├── user.service.js
+│   │   ├── consultation.service.js
+│   │   ├── donation.service.js
+│   │   ├── medication.service.js
+│   │   ├── education.service.js
+│   │   └── translation.service.js
+│   │
+│   ├── middleware/
+│   │   ├── auth.middleware.js
+│   │   ├── error.middleware.js
+│   │   ├── validation.middleware.js
+│   │   └── role.middleware.js
+│   │
+│   ├── utils/
+│   │   ├── apiResponse.js
+│   │   ├── emailHelper.js
+│   │   ├── paymentHelper.js
+│   │   ├── matchingHelper.js
+│   │   └── notificationHelper.js
+│   │
+│   ├── logs/
+│   │   └── (runtime logs)
+│   │
+│   ├── app.js
+│   └── server.js
+│
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── postman_collection.json
+│
+├── public/
+│   ├── uploads/
+│   └── static/
+│
+├── docs/
+│   ├── API_Documentation.md
+│   ├── Database_Schema.png
+│   └── System_Architecture.pdf
+│
+├── .env
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md</code></pre></div><section class="detached"><h2 id="-126850163#src-core-application-source" data-toc="src-core-application-source#PROJECT_STRUCTURE.md-src-core-application-source"><span class="no-bold">📁</span> src/ &mdash; Core Application Source</h2><p id="-126850163#k9j0cr_30">This folder contains all the backend logic, including configuration, API routes, controllers, services, and utilities.</p><section class="detached"><h3 id="-126850163#src-config" data-toc="src-config#PROJECT_STRUCTURE.md-src-config"><span class="no-bold">⚙</span>️ src/config/</h3><p id="-126850163#k9j0cr_43"><span class="control" id="-126850163#k9j0cr_47">Purpose:</span> System-wide configuration files. <span class="control" id="-126850163#k9j0cr_49">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_50">Shared setup (Yousef &amp; Hazem)</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_44"><tr class="header-row" id="-126850163#k9j0cr_51"><th id="-126850163#k9j0cr_55"><p>File</p></th><th id="-126850163#k9j0cr_56"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_52"><td id="-126850163#k9j0cr_57"><p><span class="inline-code" id="-126850163#k9j0cr_59">db.js</span></p></td><td id="-126850163#k9j0cr_58"><p>Database connection file using Sequelize (MySQL).</p></td></tr><tr class="" id="-126850163#k9j0cr_53"><td id="-126850163#k9j0cr_60"><p><span class="inline-code" id="-126850163#k9j0cr_62">logger.js</span></p></td><td id="-126850163#k9j0cr_61"><p>Winston or custom logger setup (Hazem manages runtime logs).</p></td></tr><tr class="" id="-126850163#k9j0cr_54"><td id="-126850163#k9j0cr_63"><p><span class="inline-code" id="-126850163#k9j0cr_65">env.js</span></p></td><td id="-126850163#k9j0cr_64"><p>Loads environment variables using <span class="inline-code" id="-126850163#k9j0cr_66">dotenv</span>.</p></td></tr></table></div></section><section class="detached"><h3 id="-126850163#src-models" data-toc="src-models#PROJECT_STRUCTURE.md-src-models"><span class="no-bold">🧩</span> src/models/</h3><p id="-126850163#k9j0cr_68"><span class="control" id="-126850163#k9j0cr_72">Purpose:</span> Defines database models (tables) and their relationships. <span class="control" id="-126850163#k9j0cr_74">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_75">Each member for their own module&rsquo;s models.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_69"><tr class="header-row" id="-126850163#k9j0cr_76"><th id="-126850163#k9j0cr_83"><p>File</p></th><th id="-126850163#k9j0cr_84"><p>Owner</p></th><th id="-126850163#k9j0cr_85"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_77"><td id="-126850163#k9j0cr_86"><p><span class="inline-code" id="-126850163#k9j0cr_89">user.model.js</span></p></td><td id="-126850163#k9j0cr_87"><p>Yousef</p></td><td id="-126850163#k9j0cr_88"><p>User schema (patients, doctors, donors, NGOs) with role field.</p></td></tr><tr class="" id="-126850163#k9j0cr_78"><td id="-126850163#k9j0cr_90"><p><span class="inline-code" id="-126850163#k9j0cr_93">consultation.model.js</span></p></td><td id="-126850163#k9j0cr_91"><p>Yousef</p></td><td id="-126850163#k9j0cr_92"><p>Manages appointment sessions, types (video/chat), and status.</p></td></tr><tr class="" id="-126850163#k9j0cr_79"><td id="-126850163#k9j0cr_94"><p><span class="inline-code" id="-126850163#k9j0cr_97">donation.model.js</span></p></td><td id="-126850163#k9j0cr_95"><p>Yazan</p></td><td id="-126850163#k9j0cr_96"><p>Represents donation campaigns, sponsors, and transactions.</p></td></tr><tr class="" id="-126850163#k9j0cr_80"><td id="-126850163#k9j0cr_98"><p><span class="inline-code" id="-126850163#k9j0cr_101">medication.model.js</span></p></td><td id="-126850163#k9j0cr_99"><p>Hazem</p></td><td id="-126850163#k9j0cr_100"><p>Stores medicine/equipment inventory and availability.</p></td></tr><tr class="" id="-126850163#k9j0cr_81"><td id="-126850163#k9j0cr_102"><p><span class="inline-code" id="-126850163#k9j0cr_105">education.model.js</span></p></td><td id="-126850163#k9j0cr_103"><p>Muath</p></td><td id="-126850163#k9j0cr_104"><p>Articles, workshops, and mental support resources.</p></td></tr><tr class="" id="-126850163#k9j0cr_82"><td id="-126850163#k9j0cr_106"><p><span class="inline-code" id="-126850163#k9j0cr_109">index.js</span></p></td><td id="-126850163#k9j0cr_107"><p>Shared</p></td><td id="-126850163#k9j0cr_108"><p>Combines and exports all Sequelize models.</p></td></tr></table></div></section><section class="detached"><h3 id="-126850163#src-routes" data-toc="src-routes#PROJECT_STRUCTURE.md-src-routes"><span class="no-bold">🌐</span> src/routes/</h3><p id="-126850163#k9j0cr_111"><span class="control" id="-126850163#k9j0cr_115">Purpose:</span> Defines all RESTful API endpoints and connects them to controllers. <span class="control" id="-126850163#k9j0cr_117">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_118">Each member handles their module routes.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_112"><tr class="header-row" id="-126850163#k9j0cr_119"><th id="-126850163#k9j0cr_126"><p>File</p></th><th id="-126850163#k9j0cr_127"><p>Owner</p></th><th id="-126850163#k9j0cr_128"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_120"><td id="-126850163#k9j0cr_129"><p><span class="inline-code" id="-126850163#k9j0cr_132">user.routes.js</span></p></td><td id="-126850163#k9j0cr_130"><p>Yousef</p></td><td id="-126850163#k9j0cr_131"><p>Handles authentication, registration, and role-based routes.</p></td></tr><tr class="" id="-126850163#k9j0cr_121"><td id="-126850163#k9j0cr_133"><p><span class="inline-code" id="-126850163#k9j0cr_136">consultation.routes.js</span></p></td><td id="-126850163#k9j0cr_134"><p>Yousef</p></td><td id="-126850163#k9j0cr_135"><p>API routes for remote consultation sessions.</p></td></tr><tr class="" id="-126850163#k9j0cr_122"><td id="-126850163#k9j0cr_137"><p><span class="inline-code" id="-126850163#k9j0cr_140">donation.routes.js</span></p></td><td id="-126850163#k9j0cr_138"><p>Yazan</p></td><td id="-126850163#k9j0cr_139"><p>Routes for donations, campaigns, and invoices.</p></td></tr><tr class="" id="-126850163#k9j0cr_123"><td id="-126850163#k9j0cr_141"><p><span class="inline-code" id="-126850163#k9j0cr_144">medication.routes.js</span></p></td><td id="-126850163#k9j0cr_142"><p>Hazem</p></td><td id="-126850163#k9j0cr_143"><p>Routes for managing medicine and equipment coordination.</p></td></tr><tr class="" id="-126850163#k9j0cr_124"><td id="-126850163#k9j0cr_145"><p><span class="inline-code" id="-126850163#k9j0cr_148">education.routes.js</span></p></td><td id="-126850163#k9j0cr_146"><p>Muath</p></td><td id="-126850163#k9j0cr_147"><p>Routes for educational content and mental support.</p></td></tr><tr class="" id="-126850163#k9j0cr_125"><td id="-126850163#k9j0cr_149"><p><span class="inline-code" id="-126850163#k9j0cr_152">index.js</span></p></td><td id="-126850163#k9j0cr_150"><p>Shared</p></td><td id="-126850163#k9j0cr_151"><p>Combines all routers into one main router.</p></td></tr></table></div></section><section class="detached"><h3 id="-126850163#src-controllers" data-toc="src-controllers#PROJECT_STRUCTURE.md-src-controllers"><span class="no-bold">🧠</span> src/controllers/</h3><p id="-126850163#k9j0cr_154"><span class="control" id="-126850163#k9j0cr_158">Purpose:</span> Controls the business logic for each route. <span class="control" id="-126850163#k9j0cr_160">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_161">Each member writes logic for their module.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_155"><tr class="header-row" id="-126850163#k9j0cr_162"><th id="-126850163#k9j0cr_169"><p>File</p></th><th id="-126850163#k9j0cr_170"><p>Owner</p></th><th id="-126850163#k9j0cr_171"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_163"><td id="-126850163#k9j0cr_172"><p><span class="inline-code" id="-126850163#k9j0cr_175">user.controller.js</span></p></td><td id="-126850163#k9j0cr_173"><p>Yousef</p></td><td id="-126850163#k9j0cr_174"><p>Handles login, signup, JWT tokens, and profile management.</p></td></tr><tr class="" id="-126850163#k9j0cr_164"><td id="-126850163#k9j0cr_176"><p><span class="inline-code" id="-126850163#k9j0cr_179">consultation.controller.js</span></p></td><td id="-126850163#k9j0cr_177"><p>Yousef</p></td><td id="-126850163#k9j0cr_178"><p>Manages consultations (CRUD + scheduling).</p></td></tr><tr class="" id="-126850163#k9j0cr_165"><td id="-126850163#k9j0cr_180"><p><span class="inline-code" id="-126850163#k9j0cr_183">donation.controller.js</span></p></td><td id="-126850163#k9j0cr_181"><p>Yazan</p></td><td id="-126850163#k9j0cr_182"><p>Handles donations, payments, and campaign progress.</p></td></tr><tr class="" id="-126850163#k9j0cr_166"><td id="-126850163#k9j0cr_184"><p><span class="inline-code" id="-126850163#k9j0cr_187">medication.controller.js</span></p></td><td id="-126850163#k9j0cr_185"><p>Hazem</p></td><td id="-126850163#k9j0cr_186"><p>Manages inventory, matching, and availability tracking.</p></td></tr><tr class="" id="-126850163#k9j0cr_167"><td id="-126850163#k9j0cr_188"><p><span class="inline-code" id="-126850163#k9j0cr_191">education.controller.js</span></p></td><td id="-126850163#k9j0cr_189"><p>Muath</p></td><td id="-126850163#k9j0cr_190"><p>Controls articles, guides, and mental health resources.</p></td></tr><tr class="" id="-126850163#k9j0cr_168"><td id="-126850163#k9j0cr_192"><p><span class="inline-code" id="-126850163#k9j0cr_195">index.js</span></p></td><td id="-126850163#k9j0cr_193"><p>Shared</p></td><td id="-126850163#k9j0cr_194"><p>Exports all controllers.</p></td></tr></table></div></section><section class="detached"><h3 id="-126850163#src-services" data-toc="src-services#PROJECT_STRUCTURE.md-src-services"><span class="no-bold">🔧</span> src/services/</h3><p id="-126850163#k9j0cr_197"><span class="control" id="-126850163#k9j0cr_201">Purpose:</span> Business-level logic and integrations (APIs, helpers, or third-party). <span class="control" id="-126850163#k9j0cr_203">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_204">Each member contributes based on module requirements.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_198"><tr class="header-row" id="-126850163#k9j0cr_205"><th id="-126850163#k9j0cr_212"><p>File</p></th><th id="-126850163#k9j0cr_213"><p>Owner</p></th><th id="-126850163#k9j0cr_214"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_206"><td id="-126850163#k9j0cr_215"><p><span class="inline-code" id="-126850163#k9j0cr_218">user.service.js</span></p></td><td id="-126850163#k9j0cr_216"><p>Yousef</p></td><td id="-126850163#k9j0cr_217"><p>User operations and authentication helpers.</p></td></tr><tr class="" id="-126850163#k9j0cr_207"><td id="-126850163#k9j0cr_219"><p><span class="inline-code" id="-126850163#k9j0cr_222">consultation.service.js</span></p></td><td id="-126850163#k9j0cr_220"><p>Yousef</p></td><td id="-126850163#k9j0cr_221"><p>Session scheduling and translation handling.</p></td></tr><tr class="" id="-126850163#k9j0cr_208"><td id="-126850163#k9j0cr_223"><p><span class="inline-code" id="-126850163#k9j0cr_226">donation.service.js</span></p></td><td id="-126850163#k9j0cr_224"><p>Yazan</p></td><td id="-126850163#k9j0cr_225"><p>Donation management and payment service integration.</p></td></tr><tr class="" id="-126850163#k9j0cr_209"><td id="-126850163#k9j0cr_227"><p><span class="inline-code" id="-126850163#k9j0cr_230">medication.service.js</span></p></td><td id="-126850163#k9j0cr_228"><p>Hazem</p></td><td id="-126850163#k9j0cr_229"><p>Handles medicine/equipment logic and matching algorithm.</p></td></tr><tr class="" id="-126850163#k9j0cr_210"><td id="-126850163#k9j0cr_231"><p><span class="inline-code" id="-126850163#k9j0cr_234">education.service.js</span></p></td><td id="-126850163#k9j0cr_232"><p>Muath</p></td><td id="-126850163#k9j0cr_233"><p>Manages content retrieval and caching.</p></td></tr><tr class="" id="-126850163#k9j0cr_211"><td id="-126850163#k9j0cr_235"><p><span class="inline-code" id="-126850163#k9j0cr_238">translation.service.js</span></p></td><td id="-126850163#k9j0cr_236"><p>Yousef</p></td><td id="-126850163#k9j0cr_237"><p>Integrates Google Translate API for bilingual consultations.</p></td></tr></table></div></section><section class="detached"><h3 id="-126850163#src-middleware" data-toc="src-middleware#PROJECT_STRUCTURE.md-src-middleware"><span class="no-bold">🧱</span> src/middleware/</h3><p id="-126850163#k9j0cr_240"><span class="control" id="-126850163#k9j0cr_244">Purpose:</span> Middleware for validation, authentication, error handling, and roles. <span class="control" id="-126850163#k9j0cr_246">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_247">Shared setup with key owners.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_241"><tr class="header-row" id="-126850163#k9j0cr_248"><th id="-126850163#k9j0cr_253"><p>File</p></th><th id="-126850163#k9j0cr_254"><p>Owner</p></th><th id="-126850163#k9j0cr_255"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_249"><td id="-126850163#k9j0cr_256"><p><span class="inline-code" id="-126850163#k9j0cr_259">auth.middleware.js</span></p></td><td id="-126850163#k9j0cr_257"><p>Yousef</p></td><td id="-126850163#k9j0cr_258"><p>Verifies JWT tokens and user sessions.</p></td></tr><tr class="" id="-126850163#k9j0cr_250"><td id="-126850163#k9j0cr_260"><p><span class="inline-code" id="-126850163#k9j0cr_263">error.middleware.js</span></p></td><td id="-126850163#k9j0cr_261"><p>Hazem</p></td><td id="-126850163#k9j0cr_262"><p>Global error handling and logging.</p></td></tr><tr class="" id="-126850163#k9j0cr_251"><td id="-126850163#k9j0cr_264"><p><span class="inline-code" id="-126850163#k9j0cr_267">validation.middleware.js</span></p></td><td id="-126850163#k9j0cr_265"><p>Yazan</p></td><td id="-126850163#k9j0cr_266"><p>Validates incoming request data using Joi.</p></td></tr><tr class="" id="-126850163#k9j0cr_252"><td id="-126850163#k9j0cr_268"><p><span class="inline-code" id="-126850163#k9j0cr_271">role.middleware.js</span></p></td><td id="-126850163#k9j0cr_269"><p>Yousef</p></td><td id="-126850163#k9j0cr_270"><p>Checks user roles and permissions.</p></td></tr></table></div></section><section class="detached"><h3 id="-126850163#src-utils" data-toc="src-utils#PROJECT_STRUCTURE.md-src-utils"><span class="no-bold">🧰</span> src/utils/</h3><p id="-126850163#k9j0cr_273"><span class="control" id="-126850163#k9j0cr_277">Purpose:</span> Helper functions and reusable utility modules. <span class="control" id="-126850163#k9j0cr_279">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_280">Shared among all.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_274"><tr class="header-row" id="-126850163#k9j0cr_281"><th id="-126850163#k9j0cr_287"><p>File</p></th><th id="-126850163#k9j0cr_288"><p>Owner</p></th><th id="-126850163#k9j0cr_289"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_282"><td id="-126850163#k9j0cr_290"><p><span class="inline-code" id="-126850163#k9j0cr_293">apiResponse.js</span></p></td><td id="-126850163#k9j0cr_291"><p>Shared</p></td><td id="-126850163#k9j0cr_292"><p>Standardizes API response formats.</p></td></tr><tr class="" id="-126850163#k9j0cr_283"><td id="-126850163#k9j0cr_294"><p><span class="inline-code" id="-126850163#k9j0cr_297">emailHelper.js</span></p></td><td id="-126850163#k9j0cr_295"><p>Muath</p></td><td id="-126850163#k9j0cr_296"><p>Sends email notifications for events (support, campaigns).</p></td></tr><tr class="" id="-126850163#k9j0cr_284"><td id="-126850163#k9j0cr_298"><p><span class="inline-code" id="-126850163#k9j0cr_301">paymentHelper.js</span></p></td><td id="-126850163#k9j0cr_299"><p>Yazan</p></td><td id="-126850163#k9j0cr_300"><p>Simulates or integrates donation payment flow.</p></td></tr><tr class="" id="-126850163#k9j0cr_285"><td id="-126850163#k9j0cr_302"><p><span class="inline-code" id="-126850163#k9j0cr_305">matchingHelper.js</span></p></td><td id="-126850163#k9j0cr_303"><p>Hazem</p></td><td id="-126850163#k9j0cr_304"><p>Matches patients&rsquo; needs with available equipment.</p></td></tr><tr class="" id="-126850163#k9j0cr_286"><td id="-126850163#k9j0cr_306"><p><span class="inline-code" id="-126850163#k9j0cr_309">notificationHelper.js</span></p></td><td id="-126850163#k9j0cr_307"><p>Yousef</p></td><td id="-126850163#k9j0cr_308"><p>Sends reminders or push notifications.</p></td></tr></table></div></section><section class="detached"><h3 id="-126850163#src-logs" data-toc="src-logs#PROJECT_STRUCTURE.md-src-logs">🪵 src/logs/</h3><p id="-126850163#k9j0cr_311"><span class="control" id="-126850163#k9j0cr_315">Purpose:</span> Stores auto-generated runtime logs (via Winston or custom logger). <span class="control" id="-126850163#k9j0cr_317">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_318">Hazem Mahameed</span></p><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="-126850163#k9j0cr_319">Log files will include error logs, request tracking, and DB activity traces.</p></div>
+</blockquote>
+</section><section class="detached"><h3 id="-126850163#core-files" data-toc="core-files#PROJECT_STRUCTURE.md-core-files"><span class="no-bold">🚀</span> Core Files</h3><div class="table-wrapper detached"><table id="-126850163#k9j0cr_320"><tr class="header-row" id="-126850163#k9j0cr_322"><th id="-126850163#k9j0cr_325"><p>File</p></th><th id="-126850163#k9j0cr_326"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_323"><td id="-126850163#k9j0cr_327"><p><span class="inline-code" id="-126850163#k9j0cr_329">app.js</span></p></td><td id="-126850163#k9j0cr_328"><p>Initializes Express, middleware, routes, and error handlers.</p></td></tr><tr class="" id="-126850163#k9j0cr_324"><td id="-126850163#k9j0cr_330"><p><span class="inline-code" id="-126850163#k9j0cr_332">server.js</span></p></td><td id="-126850163#k9j0cr_331"><p>Starts the server and connects to the database.</p></td></tr></table></div></section></section><section class="detached"><h2 id="-126850163#tests" data-toc="tests#PROJECT_STRUCTURE.md-tests"><span class="no-bold">🧪</span> tests/</h2><p id="-126850163#k9j0cr_334"><span class="control" id="-126850163#k9j0cr_338">Purpose:</span> Unit and integration testing. <span class="control" id="-126850163#k9j0cr_340">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_341">Everyone writes tests for their modules.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_335"><tr class="header-row" id="-126850163#k9j0cr_342"><th id="-126850163#k9j0cr_346"><p>Folder/File</p></th><th id="-126850163#k9j0cr_347"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_343"><td id="-126850163#k9j0cr_348"><p><span class="inline-code" id="-126850163#k9j0cr_350">unit/</span></p></td><td id="-126850163#k9j0cr_349"><p>Unit tests for services, controllers, and utils.</p></td></tr><tr class="" id="-126850163#k9j0cr_344"><td id="-126850163#k9j0cr_351"><p><span class="inline-code" id="-126850163#k9j0cr_353">integration/</span></p></td><td id="-126850163#k9j0cr_352"><p>Full API integration tests.</p></td></tr><tr class="" id="-126850163#k9j0cr_345"><td id="-126850163#k9j0cr_354"><p><span class="inline-code" id="-126850163#k9j0cr_356">postman_collection.json</span></p></td><td id="-126850163#k9j0cr_355"><p>Postman collection for manual API testing.</p></td></tr></table></div></section><section class="detached"><h2 id="-126850163#public" data-toc="public#PROJECT_STRUCTURE.md-public"><span class="no-bold">🌍</span> public/</h2><p id="-126850163#k9j0cr_358"><span class="control" id="-126850163#k9j0cr_362">Purpose:</span> Static assets (uploads, reports, static files). <span class="control" id="-126850163#k9j0cr_364">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_365">Shared.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_359"><tr class="header-row" id="-126850163#k9j0cr_366"><th id="-126850163#k9j0cr_369"><p>Folder</p></th><th id="-126850163#k9j0cr_370"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_367"><td id="-126850163#k9j0cr_371"><p><span class="inline-code" id="-126850163#k9j0cr_373">uploads/</span></p></td><td id="-126850163#k9j0cr_372"><p>Patient reports, medical documents, etc.</p></td></tr><tr class="" id="-126850163#k9j0cr_368"><td id="-126850163#k9j0cr_374"><p><span class="inline-code" id="-126850163#k9j0cr_376">static/</span></p></td><td id="-126850163#k9j0cr_375"><p>Optional public assets or frontend placeholders.</p></td></tr></table></div></section><section class="detached"><h2 id="-126850163#docs" data-toc="docs#PROJECT_STRUCTURE.md-docs"><span class="no-bold">📘</span> docs/</h2><p id="-126850163#k9j0cr_378"><span class="control" id="-126850163#k9j0cr_382">Purpose:</span> Documentation for APIs, database, and architecture. <span class="control" id="-126850163#k9j0cr_384">Responsible:</span> <span class="emphasis" id="-126850163#k9j0cr_385">Muath Hassoun.</span></p><div class="table-wrapper detached"><table id="-126850163#k9j0cr_379"><tr class="header-row" id="-126850163#k9j0cr_386"><th id="-126850163#k9j0cr_390"><p>File</p></th><th id="-126850163#k9j0cr_391"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_387"><td id="-126850163#k9j0cr_392"><p><span class="inline-code" id="-126850163#k9j0cr_394">API_Documentation.md</span></p></td><td id="-126850163#k9j0cr_393"><p>API endpoints documentation (Swagger/Postman).</p></td></tr><tr class="" id="-126850163#k9j0cr_388"><td id="-126850163#k9j0cr_395"><p><span class="inline-code" id="-126850163#k9j0cr_397">Database_Schema.png</span></p></td><td id="-126850163#k9j0cr_396"><p>Database ER diagram.</p></td></tr><tr class="" id="-126850163#k9j0cr_389"><td id="-126850163#k9j0cr_398"><p><span class="inline-code" id="-126850163#k9j0cr_400">System_Architecture.pdf</span></p></td><td id="-126850163#k9j0cr_399"><p>System architecture overview.</p></td></tr></table></div></section><section class="detached"><h2 id="-126850163#root-files" data-toc="root-files#PROJECT_STRUCTURE.md-root-files"><span class="no-bold">🧩</span> Root Files</h2><div class="table-wrapper detached"><table id="-126850163#k9j0cr_401"><tr class="header-row" id="-126850163#k9j0cr_403"><th id="-126850163#k9j0cr_409"><p>File</p></th><th id="-126850163#k9j0cr_410"><p>Description</p></th></tr><tr class="" id="-126850163#k9j0cr_404"><td id="-126850163#k9j0cr_411"><p><span class="inline-code" id="-126850163#k9j0cr_413">.env</span></p></td><td id="-126850163#k9j0cr_412"><p>Environment variables (DB credentials, JWT secrets, etc.).</p></td></tr><tr class="" id="-126850163#k9j0cr_405"><td id="-126850163#k9j0cr_414"><p><span class="inline-code" id="-126850163#k9j0cr_416">.gitignore</span></p></td><td id="-126850163#k9j0cr_415"><p>Files and folders ignored by Git.</p></td></tr><tr class="" id="-126850163#k9j0cr_406"><td id="-126850163#k9j0cr_417"><p><span class="inline-code" id="-126850163#k9j0cr_419">package.json</span></p></td><td id="-126850163#k9j0cr_418"><p>Node project dependencies and scripts.</p></td></tr><tr class="" id="-126850163#k9j0cr_407"><td id="-126850163#k9j0cr_420"><p><span class="inline-code" id="-126850163#k9j0cr_422">package-lock.json</span></p></td><td id="-126850163#k9j0cr_421"><p>Auto-generated dependency lock file.</p></td></tr><tr class="" id="-126850163#k9j0cr_408"><td id="-126850163#k9j0cr_423"><p><span class="inline-code" id="-126850163#k9j0cr_425">README.md</span></p></td><td id="-126850163#k9j0cr_424"><p>General project overview and setup instructions.</p></td></tr></table></div></section><section class="detached"><h2 id="-126850163#summary-of-responsibility" data-toc="summary-of-responsibility#PROJECT_STRUCTURE.md-summary-of-responsibility"><span class="no-bold">✅</span> Summary of Responsibility</h2><div class="table-wrapper detached"><table id="-126850163#k9j0cr_426"><tr class="header-row" id="-126850163#k9j0cr_429"><th id="-126850163#k9j0cr_434"><p>Member</p></th><th id="-126850163#k9j0cr_435"><p>Main Modules</p></th><th id="-126850163#k9j0cr_436"><p>Shared Responsibilities</p></th></tr><tr class="" id="-126850163#k9j0cr_430"><td id="-126850163#k9j0cr_437"><p><span class="control" id="-126850163#k9j0cr_440">Yousef Hannani</span></p></td><td id="-126850163#k9j0cr_438"><p>Users, Consultations</p></td><td id="-126850163#k9j0cr_439"><p>Authentication, Role middleware</p></td></tr><tr class="" id="-126850163#k9j0cr_431"><td id="-126850163#k9j0cr_441"><p><span class="control" id="-126850163#k9j0cr_444">Yazan Jamal</span></p></td><td id="-126850163#k9j0cr_442"><p>Donations, Sponsorships</p></td><td id="-126850163#k9j0cr_443"><p>Validation, Security</p></td></tr><tr class="" id="-126850163#k9j0cr_432"><td id="-126850163#k9j0cr_445"><p><span class="control" id="-126850163#k9j0cr_448">Hazem Mahameed</span></p></td><td id="-126850163#k9j0cr_446"><p>Medication, Equipment</p></td><td id="-126850163#k9j0cr_447"><p>Logging, Error handling</p></td></tr><tr class="" id="-126850163#k9j0cr_433"><td id="-126850163#k9j0cr_449"><p><span class="control" id="-126850163#k9j0cr_452">Muath Hassoun</span></p></td><td id="-126850163#k9j0cr_450"><p>Education, Mental Health</p></td><td id="-126850163#k9j0cr_451"><p>Documentation, Email notifications</p></td></tr></table></div><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="-126850163#k9j0cr_453"><span class="no-bold">💡</span> <span class="control" id="-126850163#k9j0cr_454">Tip:</span> Keep your code modular and consistent with naming conventions.  Use <span class="inline-code" id="-126850163#k9j0cr_456">.service.js</span> for reusable business logic and <span class="inline-code" id="-126850163#k9j0cr_457">.controller.js</span> only for route-level logic.</p></div>
+</blockquote>
+</section></article></div></section></div></body></html>

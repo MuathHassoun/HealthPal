@@ -1,0 +1,14 @@
+To connect with a GitHub may you need...
+Username:
+MuathHassoun
+
+Token: health_pal token (Expiration: 60Days)
+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
+
+Branches:
+-- MuathRepo
+-- YousefBranch
+-- HazemBranch
+-- YazanBranch
+
+** Pls, don't use the (Main) branch.
