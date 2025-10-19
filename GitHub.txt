@@ -11,4 +11,4 @@ Branches:
 -- HazemBranch
 -- YazanBranch
 
-** Pls, don't use the (Main) branch.
+** Pls, don't use the (Main) branch, each one use his branch.
