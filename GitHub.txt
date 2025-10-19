@@ -1,4 +1,7 @@
 To connect with a GitHub may you need...
+URL:
+https://github.com/MuathHassoun/HealthPal.git
+
 Username:
 MuathHassoun
 
