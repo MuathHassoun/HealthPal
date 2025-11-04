@@ -1,0 +1,16 @@
+import { DataTypes } from 'sequelize';
+import { sequelize } from '../config/db.js';
+
+const User = sequelize.define('User', {
+    full_name: { type: DataTypes.STRING, allowNull: false },
+    email: { type: DataTypes.STRING, allowNull: false, unique: true, validate: { isEmail: true } },
+    password_hash: { type: DataTypes.STRING, allowNull: false },
+    role: { type: DataTypes.ENUM('patient','doctor','donor','ngo','admin'), defaultValue: 'patient' },
+    phone: { type: DataTypes.STRING },
+    created_at: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
+}, {
+    tableName: 'users',
+    timestamps: false,
+});
+
+export default User;
