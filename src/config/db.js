@@ -1,4 +1,3 @@
-// DB Connection using Sequelize, MySQL dialect, and env.js for config variables instead of .env file
 import { Sequelize } from 'sequelize';
 import { DB_CONFIG } from './env.js';
 
