@@ -1,7 +1,10 @@
 import express from 'express';
 import { connectDB, sequelize } from './config/db.js';
-import educationRoutes from './routes/education.js';
 import { DataTypes } from 'sequelize';
+
+import educationRoutes from './routes/education.js';
+import alertRoutes from './routes/alerts.js';
+import supportSessionRoutes from './routes/supportSession.js';
 
 const app = express();
 app.use(express.json());
@@ -19,6 +22,8 @@ await sequelize.sync({ alter: true });
 
 // Routes
 app.use('/api/education', educationRoutes);
+app.use('/api/alerts', alertRoutes);
+app.use('/api/mental-support', supportSessionRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
