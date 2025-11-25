@@ -1,0 +1,48 @@
+{
+  "info": {
+    "name": "HealthPal API",
+    "description": "Collection for testing and documenting HealthPal backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Patients",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["patients"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Patient",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 30\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/patients",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["patients"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
