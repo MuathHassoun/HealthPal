@@ -1,6 +1,6 @@
 Cloud MySQL Database Connection Details:
-
 URL: https://phpmyadmin.alwaysdata.com/phpmyadmin/index.php?route=/database/structure&db=healthpal_db
+
 Host: mysql-healthpal.alwaysdata.net
 Port: 3306
 Username: healthpal
