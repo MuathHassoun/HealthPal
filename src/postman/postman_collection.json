@@ -6,6 +6,21 @@
   },
   "item": [
     {
+      "name": "Get Patients",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/patients",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["patients"]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create Patient",
       "request": {
         "method": "POST",
