@@ -91,3 +91,14 @@
 {"ip":"::1","level":"info","message":"Incoming request","method":"PATCH","service":"healthpal-backend","timestamp":"2025-12-05 13:45:57","url":"/api/inventory/7/quantity","userAgent":"PostmanRuntime/7.49.1"}
 {"change":50,"id":"7","level":"info","message":"Quantity updated","newQuantity":140,"oldQuantity":90,"service":"healthpal-backend","timestamp":"2025-12-05 13:45:57"}
 {"level":"info","message":"\u001b[0mPATCH /api/inventory/7/quantity \u001b[32m200\u001b[0m 186.006 ms - 246\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:45:57"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-05 14:12:13"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-05 14:12:23"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 14:12:49","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 2 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 14:12:50","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 366.117 ms - 418\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 14:12:50"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 14:12:51","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 2 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 14:12:51","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 89.408 ms - 418\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 14:12:51"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 14:13:05","url":"/api/inventory/stats","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Inventory statistics retrieved","service":"healthpal-backend","stats":{"equipment":{"totalItems":3,"totalQuantity":25},"medicines":{"totalItems":2,"totalQuantity":190}},"timestamp":"2025-12-05 14:13:06"}
+{"level":"info","message":"\u001b[0mGET /api/inventory/stats \u001b[32m200\u001b[0m 757.533 ms - 178\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 14:13:06"}

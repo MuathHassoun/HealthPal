@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-//src/app.js
-import express from 'express';
-import cors from 'cors';
-import educationRoutes from './routes/education.js';
-import alertRoutes from './routes/alerts.js';
-import supportSessionRoutes from './routes/supportSession.js';
-import consultionRoutes from './routes/consultation.js';
-import userRoutes from './routes/user.js';
-
-const app = express();
-
-// Enable CORS for frontend communication
-app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-    credentials: true,
-    optionsSuccessStatus: 200
-}));
-
-app.use(express.json());
-=======
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -30,25 +9,22 @@ import { errorHandler, notFoundHandler } from './middleware/error.middleware.js'
 import educationRoutes from './routes/education.js';
 import alertRoutes from './routes/alerts.js';
 import supportSessionRoutes from './routes/supportSession.js';
+import consultationRoutes from './routes/consultation.js';
+import userRoutes from './routes/user.js';
 import medicationRoutes from './routes/medication.routes.js';
 
 const app = express();
->>>>>>> a57bf28 (hazem part medication)
-
-app.get('/test-error', (req, res) => {
-    throw new Error("TEST ERROR");
-});
-
 
 // ============ MIDDLEWARE ============
 
 // Security middleware
 app.use(helmet());
 
-// CORS
+// Enable CORS
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || '*',
-    credentials: true
+    origin: process.env.FRONTEND_URL || process.env.CORS_ORIGIN || '*',
+    credentials: true,
+    optionsSuccessStatus: 200
 }));
 
 // Body parsers
@@ -78,9 +54,12 @@ app.use((req, res, next) => {
     next();
 });
 
-// ============ ROUTES ============
+// ============ TEST / HEALTH ============
 
-// Health check
+app.get('/test-error', (req, res) => {
+    throw new Error("TEST ERROR");
+});
+
 app.get('/health', (req, res) => {
     res.status(200).json({
         success: true,
@@ -90,7 +69,6 @@ app.get('/health', (req, res) => {
     });
 });
 
-// Root endpoint
 app.get('/', (req, res) => {
     res.status(200).json({
         success: true,
@@ -108,23 +86,18 @@ app.get('/', (req, res) => {
     });
 });
 
-// API routes
+// ============ ROUTES ============
+
 app.use('/api/education', educationRoutes);
 app.use('/api/alerts', alertRoutes);
 app.use('/api/mental-support', supportSessionRoutes);
-<<<<<<< HEAD
-app.use('/api/consultations', consultionRoutes);
+app.use('/api/consultations', consultationRoutes);
 app.use('/api/users', userRoutes);
-=======
 app.use('/api', medicationRoutes);
 
 // ============ ERROR HANDLING ============
 
-// 404 handler (must be after all routes)
-app.use(notFoundHandler);
+app.use(notFoundHandler); // 404 handler
+app.use(errorHandler);    // Global error handler
 
-// Global error handler (must be last)
-app.use(errorHandler);
-
->>>>>>> a57bf28 (hazem part medication)
 export default app;

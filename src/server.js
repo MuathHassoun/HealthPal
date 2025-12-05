@@ -6,14 +6,8 @@ import dotenv from 'dotenv';
 // Load environment variables
 dotenv.config();
 
-<<<<<<< HEAD
-await sequelize.sync({ alter: true });
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-=======
 const PORT = process.env.PORT || 3000;
 
-// Start server
 const startServer = async () => {
     try {
         // Connect to database
@@ -21,10 +15,10 @@ const startServer = async () => {
         logger.info('Database connected successfully');
         console.log('✅ Database connected successfully');
 
-        // Sync models (if needed - be careful with this in production)
-        // await sequelize.sync({ alter: true }); // Uncomment if you want to auto-sync models
+        // Sync models (optional in production)
+        await sequelize.sync({ alter: true });
 
-        // Start listening
+        // Start server
         app.listen(PORT, () => {
             logger.info(`Server started on port ${PORT}`);
             console.log(`🚀 Server running on port ${PORT}`);
@@ -39,5 +33,5 @@ const startServer = async () => {
     }
 };
 
+// Start the server
 startServer();
->>>>>>> a57bf28 (hazem part medication)
