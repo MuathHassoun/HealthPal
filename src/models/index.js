@@ -1,3 +1,4 @@
+//src/models/index.js
 import { sequelize } from '../config/db.js';
 import User from './User.js';
 import Patient from './Patient.js';
@@ -11,38 +12,43 @@ import Log from './Log.js';
 import SupportSession from './SupportSession.js';
 import PublicAlert from './PublicAlert.js';
 
-User.hasOne(Patient, { foreignKey: 'user_id' });
-Patient.belongsTo(User, { foreignKey: 'user_id' });
+// Only set up associations if not in test mode OR if explicitly requested
+const shouldSetupAssociations = process.env.SETUP_ASSOCIATIONS === 'true' || process.env.NODE_ENV !== 'test';
 
-User.hasOne(Doctor, { foreignKey: 'user_id' });
-Doctor.belongsTo(User, { foreignKey: 'user_id' });
+if (shouldSetupAssociations) {
+    User.hasOne(Patient, { foreignKey: 'user_id' });
+    Patient.belongsTo(User, { foreignKey: 'user_id' });
 
-Doctor.hasMany(Consultation, { foreignKey: 'doctor_id' });
-Patient.hasMany(Consultation, { foreignKey: 'patient_id' });
-Consultation.belongsTo(Doctor, { foreignKey: 'doctor_id' });
-Consultation.belongsTo(Patient, { foreignKey: 'patient_id' });
+    User.hasOne(Doctor, { foreignKey: 'user_id' });
+    Doctor.belongsTo(User, { foreignKey: 'user_id' });
 
-Patient.hasMany(Sponsorship, { foreignKey: 'patient_id' });
-Sponsorship.belongsTo(Patient, { foreignKey: 'patient_id' });
+    Doctor.hasMany(Consultation, { foreignKey: 'doctor_id' });
+    Patient.hasMany(Consultation, { foreignKey: 'patient_id' });
+    Consultation.belongsTo(Doctor, { foreignKey: 'doctor_id' });
+    Consultation.belongsTo(Patient, { foreignKey: 'patient_id' });
 
-Sponsorship.hasMany(Donation, { foreignKey: 'sponsorship_id' });
-Donation.belongsTo(Sponsorship, { foreignKey: 'sponsorship_id' });
-User.hasMany(Donation, { foreignKey: 'donor_id' });
-Donation.belongsTo(User, { foreignKey: 'donor_id' });
+    Patient.hasMany(Sponsorship, { foreignKey: 'patient_id' });
+    Sponsorship.belongsTo(Patient, { foreignKey: 'patient_id' });
 
-User.hasMany(HealthGuide, { foreignKey: 'author_id' });
-HealthGuide.belongsTo(User, { foreignKey: 'author_id' });
+    Sponsorship.hasMany(Donation, { foreignKey: 'sponsorship_id' });
+    Donation.belongsTo(Sponsorship, { foreignKey: 'sponsorship_id' });
+    User.hasMany(Donation, { foreignKey: 'donor_id' });
+    Donation.belongsTo(User, { foreignKey: 'donor_id' });
 
-User.hasMany(Inventory, { foreignKey: 'added_by' });
-Inventory.belongsTo(User, { foreignKey: 'added_by' });
+    User.hasMany(HealthGuide, { foreignKey: 'author_id' });
+    HealthGuide.belongsTo(User, { foreignKey: 'author_id' });
 
-User.hasMany(Log, { foreignKey: 'user_id' });
-Log.belongsTo(User, { foreignKey: 'user_id' });
+    User.hasMany(Inventory, { foreignKey: 'added_by' });
+    Inventory.belongsTo(User, { foreignKey: 'added_by' });
 
-Patient.hasMany(SupportSession, { foreignKey: 'patient_id' });
-Doctor.hasMany(SupportSession, { foreignKey: 'counselor_id' });
-SupportSession.belongsTo(Patient, { foreignKey: 'patient_id' });
-SupportSession.belongsTo(Doctor, { foreignKey: 'counselor_id' });
+    User.hasMany(Log, { foreignKey: 'user_id' });
+    Log.belongsTo(User, { foreignKey: 'user_id' });
+
+    Patient.hasMany(SupportSession, { foreignKey: 'patient_id' });
+    Doctor.hasMany(SupportSession, { foreignKey: 'counselor_id' });
+    SupportSession.belongsTo(Patient, { foreignKey: 'patient_id' });
+    SupportSession.belongsTo(Doctor, { foreignKey: 'counselor_id' });
+}
 
 export {
     sequelize,

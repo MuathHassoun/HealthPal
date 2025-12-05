@@ -14,3 +14,15 @@ const User = sequelize.define('User', {
 });
 
 export default User;
+// Ensure tables exist when running tests (avoid race between imports and sync)
+let __user_synced = false;
+async function __ensure_user_synced() {
+    if (!__user_synced) {
+        await sequelize.sync();
+        __user_synced = true;
+    }
+}
+
+User.beforeCreate(async () => { await __ensure_user_synced(); });
+User.beforeBulkCreate(async () => { await __ensure_user_synced(); });
+User.beforeFind(async () => { await __ensure_user_synced(); });

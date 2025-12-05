@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///home/muath-hassoun/PhpstormProjects/HealthPal/frontend/pages/_app.js"],"sourcesContent":["import '../public/output.css';\n\nfunction MyApp({ Component, pageProps }) {\n    return <Component {...pageProps} />;\n}\n\nexport default MyApp;\n"],"names":[],"mappings":";;;;;;;AAEA,SAAS,MAAM,EAAE,SAAS,EAAE,SAAS,EAAE;IACnC,qBAAO,qKAAC;QAAW,GAAG,SAAS;;;;;;AACnC;uCAEe"}}]
+}

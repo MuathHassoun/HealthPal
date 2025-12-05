@@ -1,0 +1,13 @@
+[00:00:00.633] Server  LOG      ✓ Ready in 373ms
+[00:01:27.160] Browser ERROR   API request failed: /users/patients {}
+[00:01:27.160] Browser ERROR   Fetch error: {}
+[00:01:33.125] Browser ERROR   API request failed: /users/patients {}
+[00:01:33.125] Browser ERROR   Fetch error: {}
+[00:01:33.674] Browser ERROR   API request failed: /users/patients {}
+[00:01:33.674] Browser ERROR   Fetch error: {}
+[00:01:35.579] Browser ERROR   API request failed: /consultations {}
+[00:01:35.579] Browser ERROR   Fetch error: {}
+[00:01:43.263] Browser ERROR   API request failed: /users/patients {}
+[00:01:43.263] Browser ERROR   Fetch error: {}
+[00:16:25.424] Server  LOG      ✓ Compiled in 7ms
+[00:17:43.313] Server  LOG      ✓ Compiled in 7ms

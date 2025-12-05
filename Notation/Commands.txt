@@ -1,0 +1,22 @@
+run frontend:
+command: npm run dev
+port: 3000
+
+run server:
+command: node server.js
+port: 5000
+
+run tests:
+command: npm test
+port: none
+
+NODE_OPTIONS="--unhandled-rejections=warn" npm test 2>&1 | grep -E "PASS|FAIL|Test Suites"
+
+
+Backend:
+cd /home/muath-hassoun/PhpstormProjects/HealthPal
+npm start
+
+Frontend:
+cd /home/muath-hassoun/PhpstormProjects/HealthPal/frontend
+npm run dev

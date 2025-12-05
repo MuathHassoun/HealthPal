@@ -4,18 +4,24 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand"
+    "start": "node src/server.js",
+    "test": "NODE_ENV=test jest --runInBand"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.15.2",
     "node-fetch": "^3.3.2",
-    "sequelize": "^6.37.7"
+    "nodemailer": "^7.0.11",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
