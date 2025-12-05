@@ -1,0 +1,307 @@
+{
+  "info": {
+    "name": "Medication & Equipment",
+    "_postman_id": "c4f88a62-9d7a-4d8f-8b9a-123456789abc",
+    "description": "API requests for Medication & Equipment management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Medicines",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/medicines",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "medicines"]
+        }
+      }
+    },
+    {
+      "name": "Get All Medicines (Filtered)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/medicines?status=available&location=Nablus",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "medicines"],
+          "query": [
+            { "key": "status", "value": "available" },
+            { "key": "location", "value": "Nablus" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Available Medicines",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/medicines/available",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "medicines", "available"]
+        }
+      }
+    },
+    {
+      "name": "Get Medicine by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/medicines/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "medicines", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create Medicine",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Paracetamol 500mg\",\n  \"quantity\": 100,\n  \"location\": \"Nablus Central Pharmacy\",\n  \"status\": \"available\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/medicines",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "medicines"]
+        }
+      }
+    },
+    {
+      "name": "Update Medicine",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"quantity\": 150,\n  \"status\": \"available\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/medicines/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "medicines", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Medicine",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/medicines/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "medicines", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get All Equipment",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/equipment",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "equipment"]
+        }
+      }
+    },
+    {
+      "name": "Get Available Equipment",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/equipment/available",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "equipment", "available"]
+        }
+      }
+    },
+    {
+      "name": "Get Equipment by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/equipment/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "equipment", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create Equipment",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Wheelchair\",\n  \"quantity\": 5,\n  \"location\": \"Nablus Rehabilitation Center\",\n  \"status\": \"available\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/equipment",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "equipment"]
+        }
+      }
+    },
+    {
+      "name": "Update Equipment",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"quantity\": 8,\n  \"status\": \"available\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/equipment/4",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "equipment", "4"]
+        }
+      }
+    },
+    {
+      "name": "Delete Equipment",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/equipment/4",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "equipment", "4"]
+        }
+      }
+    },
+    {
+      "name": "Find Matches",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"itemType\": \"medicine\",\n  \"itemName\": \"Paracetamol\",\n  \"quantity\": 10,\n  \"location\": \"Nablus\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/matching",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "matching"]
+        }
+      }
+    },
+    {
+      "name": "Reserve Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"itemId\": 1,\n  \"quantity\": 10\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/matching/reserve",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "matching", "reserve"]
+        }
+      }
+    },
+    {
+      "name": "Get Inventory Statistics",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/inventory/stats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventory", "stats"]
+        }
+      }
+    },
+    {
+      "name": "Update Item Quantity",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"quantityChange\": 50\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/inventory/1/quantity",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "inventory", "1", "quantity"]
+        }
+      }
+    }
+  ]
+}

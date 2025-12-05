@@ -1,0 +1,93 @@
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-05 11:28:24"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-05 11:28:24"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 11:28:40","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 0 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 11:28:40","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 340.866 ms - 71\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 11:28:40"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 11:30:02","url":"/api/medicines","userAgent":"curl/8.7.1"}
+{"level":"info","message":"Retrieved 0 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 11:30:02","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 330.639 ms - 71\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 11:30:02"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-05 11:37:30"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-05 11:37:30"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 11:37:36","url":"/api/medicines","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15"}
+{"level":"info","message":"Retrieved 0 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 11:37:36","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 75.204 ms - 71\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 11:37:36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 11:37:44","url":"/api/medicines","userAgent":"curl/8.7.1"}
+{"level":"info","message":"Retrieved 0 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 11:37:44","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 63.350 ms - 71\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 11:37:44"}
+{"level":"info","message":"Database connection successful","service":"healthpal-backend","timestamp":"2025-12-05 11:38:06"}
+{"level":"info","message":"All medication tests passed","service":"healthpal-backend","timestamp":"2025-12-05 11:38:08"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-05 11:38:15"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-05 11:38:15"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 11:38:19","url":"/api/medicines","userAgent":"curl/8.7.1"}
+{"level":"info","message":"Retrieved 2 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 11:38:20","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 100.261 ms - 415\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 11:38:20"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 11:38:34","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 2 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 11:38:34","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 307.151 ms - 415\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 11:38:34"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:39:28","url":"/api/medicines?status=available&location=Nablus","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","location":"Nablus","message":"Retrieved 1 items with filters","service":"healthpal-backend","status":"available","timestamp":"2025-12-05 13:39:28","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines?status=available&location=Nablus \u001b[32m200\u001b[0m 425.428 ms - 248\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:39:29"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:39:41","url":"/api/medicines/available","userAgent":"PostmanRuntime/7.49.1"}
+{"count":2,"level":"info","message":"Retrieved available items","service":"healthpal-backend","timestamp":"2025-12-05 13:39:41","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines/available \u001b[32m200\u001b[0m 329.881 ms - 425\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:39:41"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:39:59","url":"/api/medicines/1","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"1","level":"info","message":"Retrieved item","name":"Paracetamol 500mg","service":"healthpal-backend","timestamp":"2025-12-05 13:39:59"}
+{"level":"info","message":"\u001b[0mGET /api/medicines/1 \u001b[32m200\u001b[0m 311.600 ms - 245\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:39:59"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-05 13:40:17","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"added_by":null,"id":7,"level":"info","message":"New item created","name":"Paracetamol 500mg","service":"healthpal-backend","timestamp":"2025-12-05 13:40:18","type":"medicine"}
+{"level":"info","message":"\u001b[0mPOST /api/medicines \u001b[32m201\u001b[0m 382.832 ms - 246\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:40:18"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:40:36","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 3 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 13:40:36","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 302.886 ms - 596\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:40:36"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"PUT","service":"healthpal-backend","timestamp":"2025-12-05 13:40:52","url":"/api/medicines/1","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"1","level":"info","message":"Item updated","newData":{"added_at":"2025-12-05T08:38:07.000Z","added_by":2,"id":1,"location":"Nablus Central Pharmacy","name":"Paracetamol 500mg","quantity":150,"status":"available","type":"medicine"},"oldData":{"added_at":"2025-12-05T08:38:07.000Z","added_by":2,"id":1,"location":"Nablus Central Pharmacy","name":"Paracetamol 500mg","quantity":120,"status":"available","type":"medicine"},"service":"healthpal-backend","timestamp":"2025-12-05 13:40:53"}
+{"level":"info","message":"\u001b[0mPUT /api/medicines/1 \u001b[32m200\u001b[0m 604.762 ms - 243\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:40:53"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:41:01","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 3 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 13:41:01","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 66.467 ms - 596\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:41:01"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"DELETE","service":"healthpal-backend","timestamp":"2025-12-05 13:41:17","url":"/api/medicines/1","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"1","level":"info","message":"Item deleted","name":"Paracetamol 500mg","service":"healthpal-backend","timestamp":"2025-12-05 13:41:17"}
+{"level":"info","message":"\u001b[0mDELETE /api/medicines/1 \u001b[32m200\u001b[0m 354.788 ms - 70\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:41:17"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:41:30","url":"/api/medicines","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 2 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 13:41:30","type":"medicine"}
+{"level":"info","message":"\u001b[0mGET /api/medicines \u001b[32m200\u001b[0m 332.457 ms - 418\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:41:30"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:41:38","url":"/api/equipment","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Retrieved 3 items with filters","service":"healthpal-backend","timestamp":"2025-12-05 13:41:38","type":"equipment"}
+{"level":"info","message":"\u001b[0mGET /api/equipment \u001b[32m200\u001b[0m 67.710 ms - 580\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:41:38"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:41:53","url":"/api/equipment/available","userAgent":"PostmanRuntime/7.49.1"}
+{"count":3,"level":"info","message":"Retrieved available items","service":"healthpal-backend","timestamp":"2025-12-05 13:41:53","type":"equipment"}
+{"level":"info","message":"\u001b[0mGET /api/equipment/available \u001b[32m200\u001b[0m 316.221 ms - 590\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:41:53"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:42:09","url":"/api/equipment/1","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"1","level":"warn","message":"Item not found","service":"healthpal-backend","timestamp":"2025-12-05 13:42:09"}
+{"level":"info","message":"\u001b[0mGET /api/equipment/1 \u001b[33m404\u001b[0m 355.948 ms - 49\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:42:09"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-05 13:42:53","url":"/api/equipment","userAgent":"PostmanRuntime/7.49.1"}
+{"added_by":null,"id":8,"level":"info","message":"New item created","name":"Wheelchair","service":"healthpal-backend","timestamp":"2025-12-05 13:42:53","type":"equipment"}
+{"level":"info","message":"\u001b[0mPOST /api/equipment \u001b[32m201\u001b[0m 415.842 ms - 244\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:42:53"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:43:01","url":"/api/equipment/8","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"8","level":"info","message":"Retrieved item","name":"Wheelchair","service":"healthpal-backend","timestamp":"2025-12-05 13:43:01"}
+{"level":"info","message":"\u001b[0mGET /api/equipment/8 \u001b[32m200\u001b[0m 68.936 ms - 246\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:43:01"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"PUT","service":"healthpal-backend","timestamp":"2025-12-05 13:43:09","url":"/api/equipment/4","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"4","level":"info","message":"Item updated","newData":{"added_at":"2025-12-05T08:38:07.000Z","added_by":2,"id":4,"location":"Jenin Hospital","name":"Oxygen Tank","quantity":8,"status":"available","type":"equipment"},"oldData":{"added_at":"2025-12-05T08:38:07.000Z","added_by":2,"id":4,"location":"Jenin Hospital","name":"Oxygen Tank","quantity":8,"status":"available","type":"equipment"},"service":"healthpal-backend","timestamp":"2025-12-05 13:43:09"}
+{"level":"info","message":"\u001b[0mPUT /api/equipment/4 \u001b[32m200\u001b[0m 70.251 ms - 228\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:43:09"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"DELETE","service":"healthpal-backend","timestamp":"2025-12-05 13:43:17","url":"/api/equipment/4","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"4","level":"info","message":"Item deleted","name":"Oxygen Tank","service":"healthpal-backend","timestamp":"2025-12-05 13:43:18"}
+{"level":"info","message":"\u001b[0mDELETE /api/equipment/4 \u001b[32m200\u001b[0m 162.067 ms - 71\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:43:18"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-05 13:43:38","url":"/api/matching","userAgent":"PostmanRuntime/7.49.1"}
+{"itemName":"Paracetamol","itemType":"medicine","level":"info","message":"Starting matching process","patientLocation":"Nablus","requestedQuantity":10,"service":"healthpal-backend","timestamp":"2025-12-05 13:43:38"}
+{"bestMatch":{"id":7,"name":"Paracetamol 500mg","score":61},"level":"info","message":"Matching completed","service":"healthpal-backend","timestamp":"2025-12-05 13:43:38","totalMatches":1}
+{"level":"info","message":"\u001b[0mPOST /api/matching \u001b[32m200\u001b[0m 319.476 ms - 309\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:43:38"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-05 13:44:06","url":"/api/matching/reserve","userAgent":"PostmanRuntime/7.49.1"}
+{"id":1,"level":"warn","message":"Item not found for reservation","service":"healthpal-backend","timestamp":"2025-12-05 13:44:06"}
+{"level":"info","message":"\u001b[0mPOST /api/matching/reserve \u001b[33m404\u001b[0m 324.833 ms - 44\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:44:06"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-05 13:45:13","url":"/api/matching/reserve","userAgent":"PostmanRuntime/7.49.1"}
+{"id":7,"level":"info","message":"Item reserved","remainingQuantity":90,"reservedQuantity":10,"service":"healthpal-backend","timestamp":"2025-12-05 13:45:14"}
+{"level":"info","message":"\u001b[0mPOST /api/matching/reserve \u001b[32m200\u001b[0m 440.314 ms - 242\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:45:14"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 13:45:26","url":"/api/inventory/stats","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"Inventory statistics retrieved","service":"healthpal-backend","stats":{"equipment":{"totalItems":3,"totalQuantity":25},"medicines":{"totalItems":2,"totalQuantity":140}},"timestamp":"2025-12-05 13:45:27"}
+{"level":"info","message":"\u001b[0mGET /api/inventory/stats \u001b[32m200\u001b[0m 508.049 ms - 178\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:45:27"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"PATCH","service":"healthpal-backend","timestamp":"2025-12-05 13:45:46","url":"/api/inventory/1/quantity","userAgent":"PostmanRuntime/7.49.1"}
+{"id":"1","level":"warn","message":"Item not found for quantity update","service":"healthpal-backend","timestamp":"2025-12-05 13:45:47"}
+{"level":"info","message":"\u001b[0mPATCH /api/inventory/1/quantity \u001b[33m404\u001b[0m 368.681 ms - 44\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:45:47"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"PATCH","service":"healthpal-backend","timestamp":"2025-12-05 13:45:57","url":"/api/inventory/7/quantity","userAgent":"PostmanRuntime/7.49.1"}
+{"change":50,"id":"7","level":"info","message":"Quantity updated","newQuantity":140,"oldQuantity":90,"service":"healthpal-backend","timestamp":"2025-12-05 13:45:57"}
+{"level":"info","message":"\u001b[0mPATCH /api/inventory/7/quantity \u001b[32m200\u001b[0m 186.006 ms - 246\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 13:45:57"}
