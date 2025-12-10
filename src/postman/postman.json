@@ -626,6 +626,415 @@
           "response": []
         }
       ]
+    },
+    {
+      "name": "Sponsorships",
+      "item": [
+        {
+          "name": "Create Sponsorship",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"patient_id\": 1,\n  \"title\": \"Heart Surgery Fund\",\n  \"description\": \"Help fund critical heart surgery\",\n  \"goal_amount\": 50000,\n  \"status\": \"active\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/sponsorships",
+              "host": ["{{base_url}}"],
+              "path": ["api", "sponsorships"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Sponsorships",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/sponsorships",
+              "host": ["{{base_url}}"],
+              "path": ["api", "sponsorships"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Sponsorships (Filtered)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/sponsorships?status=active&patientId=1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "sponsorships"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "active"
+                },
+                {
+                  "key": "patientId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Sponsorship by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/sponsorships/{{sponsorship_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "sponsorships", "{{sponsorship_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Sponsorship Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/sponsorships/{{sponsorship_id}}/dashboard",
+              "host": ["{{base_url}}"],
+              "path": ["api", "sponsorships", "{{sponsorship_id}}", "dashboard"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Sponsorship",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"completed\",\n  \"goal_amount\": 60000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/sponsorships/{{sponsorship_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "sponsorships", "{{sponsorship_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Sponsorship",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/sponsorships/{{sponsorship_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "sponsorships", "{{sponsorship_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Donations",
+      "item": [
+        {
+          "name": "Create Donation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sponsorship_id\": 1,\n  \"donor_id\": 2,\n  \"amount\": 1000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/donations",
+              "host": ["{{base_url}}"],
+              "path": ["api", "donations"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Donations",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/donations",
+              "host": ["{{base_url}}"],
+              "path": ["api", "donations"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Donations (Filtered)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/donations?sponsorshipId=1&donorId=2",
+              "host": ["{{base_url}}"],
+              "path": ["api", "donations"],
+              "query": [
+                {
+                  "key": "sponsorshipId",
+                  "value": "1"
+                },
+                {
+                  "key": "donorId",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Donation by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/donations/{{donation_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "donations", "{{donation_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Donation",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/donations/{{donation_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "donations", "{{donation_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Invoices",
+      "item": [
+        {
+          "name": "Create Invoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sponsorship_id\": 1,\n  \"donation_id\": 1,\n  \"amount\": 1000,\n  \"status\": \"paid\",\n  \"document_url\": \"https://example.com/invoice.pdf\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/invoices",
+              "host": ["{{base_url}}"],
+              "path": ["api", "invoices"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Invoices",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/invoices",
+              "host": ["{{base_url}}"],
+              "path": ["api", "invoices"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Invoices (Filtered)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/invoices?sponsorshipId=1&status=paid",
+              "host": ["{{base_url}}"],
+              "path": ["api", "invoices"],
+              "query": [
+                {
+                  "key": "sponsorshipId",
+                  "value": "1"
+                },
+                {
+                  "key": "status",
+                  "value": "paid"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Invoice by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/invoices/{{invoice_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "invoices", "{{invoice_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Invoice",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"paid\",\n  \"document_url\": \"https://example.com/updated-invoice.pdf\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/invoices/{{invoice_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "invoices", "{{invoice_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Invoice",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/invoices/{{invoice_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "invoices", "{{invoice_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
     }
   ],
   "variable": [
@@ -656,6 +1065,21 @@
     },
     {
       "key": "item_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "sponsorship_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "donation_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "invoice_id",
       "value": "1",
       "type": "string"
     }

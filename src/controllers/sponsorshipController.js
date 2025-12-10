@@ -1,4 +1,3 @@
-
 //the other : yazan 
 
 import Sponsorship from '../models/Sponsorship.js';
