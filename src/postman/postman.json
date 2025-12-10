@@ -1,348 +1,13 @@
 {
   "info": {
+    "_postman_id": "healthpal-api-collection",
     "name": "HealthPal API",
-    "description": "Collection for testing and documenting HealthPal backend API",
+    "description": "Complete API collection for HealthPal backend - includes authentication, medicines, equipment, consultations, and notifications",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
     {
-      "name": "Get Patients",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/patients",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["patients"]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Create Patient",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 30\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/patients",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["patients"]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get All Medicines",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/medicines",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "medicines"]
-        }
-      }
-    },
-    {
-      "name": "Get All Medicines (Filtered)",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/medicines?status=available&location=Nablus",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "medicines"],
-          "query": [
-            { "key": "status", "value": "available" },
-            { "key": "location", "value": "Nablus" }
-          ]
-        }
-      }
-    },
-    {
-      "name": "Get Available Medicines",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/medicines/available",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "medicines", "available"]
-        }
-      }
-    },
-    {
-      "name": "Get Medicine by ID",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/medicines/1",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "medicines", "1"]
-        }
-      }
-    },
-    {
-      "name": "Create Medicine",
-      "request": {
-        "method": "POST",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" },
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"name\": \"Paracetamol 500mg\",\n  \"quantity\": 100,\n  \"location\": \"Nablus Central Pharmacy\",\n  \"status\": \"available\"\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/medicines",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "medicines"]
-        }
-      }
-    },
-    {
-      "name": "Update Medicine",
-      "request": {
-        "method": "PUT",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" },
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"quantity\": 150,\n  \"status\": \"available\"\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/medicines/1",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "medicines", "1"]
-        }
-      }
-    },
-    {
-      "name": "Delete Medicine",
-      "request": {
-        "method": "DELETE",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" }
-        ],
-        "url": {
-          "raw": "http://localhost:3000/api/medicines/1",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "medicines", "1"]
-        }
-      }
-    },
-    {
-      "name": "Get All Equipment",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/equipment",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "equipment"]
-        }
-      }
-    },
-    {
-      "name": "Get Available Equipment",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/equipment/available",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "equipment", "available"]
-        }
-      }
-    },
-    {
-      "name": "Get Equipment by ID",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/equipment/1",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "equipment", "1"]
-        }
-      }
-    },
-    {
-      "name": "Create Equipment",
-      "request": {
-        "method": "POST",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" },
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"name\": \"Wheelchair\",\n  \"quantity\": 5,\n  \"location\": \"Nablus Rehabilitation Center\",\n  \"status\": \"available\"\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/equipment",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "equipment"]
-        }
-      }
-    },
-    {
-      "name": "Update Equipment",
-      "request": {
-        "method": "PUT",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" },
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"quantity\": 8,\n  \"status\": \"available\"\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/equipment/4",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "equipment", "4"]
-        }
-      }
-    },
-    {
-      "name": "Delete Equipment",
-      "request": {
-        "method": "DELETE",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" }
-        ],
-        "url": {
-          "raw": "http://localhost:3000/api/equipment/4",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "equipment", "4"]
-        }
-      }
-    },
-    {
-      "name": "Find Matches",
-      "request": {
-        "method": "POST",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" },
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"itemType\": \"medicine\",\n  \"itemName\": \"Paracetamol\",\n  \"quantity\": 10,\n  \"location\": \"Nablus\"\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/matching",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "matching"]
-        }
-      }
-    },
-    {
-      "name": "Reserve Item",
-      "request": {
-        "method": "POST",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" },
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"itemId\": 1,\n  \"quantity\": 10\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/matching/reserve",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "matching", "reserve"]
-        }
-      }
-    },
-    {
-      "name": "Get Inventory Statistics",
-      "request": {
-        "method": "GET",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" }
-        ],
-        "url": {
-          "raw": "http://localhost:3000/api/inventory/stats",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "inventory", "stats"]
-        }
-      }
-    },
-    {
-      "name": "Update Item Quantity",
-      "request": {
-        "method": "PATCH",
-        "header": [
-          { "key": "Authorization", "value": "Bearer {{token}}" },
-          { "key": "Content-Type", "value": "application/json" }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"quantityChange\": 50\n}"
-        },
-        "url": {
-          "raw": "http://localhost:3000/api/inventory/1/quantity",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
-          "path": ["api", "inventory", "1", "quantity"]
-        }
-      }
-    },
-    {
-      "name": "Users",
+      "name": "Authentication",
       "item": [
         {
           "name": "Signup",
@@ -356,19 +21,32 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"full_name\": \"Yousef Hanna\",\n    \"email\": \"yousef@gmail.com\",\n    \"password\": \"123456\",\n    \"role\": \"patient\"\n}"
+              "raw": "{\n  \"full_name\": \"Yousef Hanna\",\n  \"email\": \"yousef@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"patient\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/users/signup",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","users","signup"]
+              "raw": "{{base_url}}/api/users/signup",
+              "host": ["{{base_url}}"],
+              "path": ["api", "users", "signup"]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('token', jsonData.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -379,16 +57,15 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"email\": \"yousef@gmail.com\",\n    \"password\": \"123456\"\n}"
+              "raw": "{\n  \"email\": \"yousef@gmail.com\",\n  \"password\": \"123456\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/users/login",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","users","login"]
+              "raw": "{{base_url}}/api/users/login",
+              "host": ["{{base_url}}"],
+              "path": ["api", "users", "login"]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "Get Profile",
@@ -401,13 +78,409 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/api/users/profile",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","users","profile"]
+              "raw": "{{base_url}}/api/users/profile",
+              "host": ["{{base_url}}"],
+              "path": ["api", "users", "profile"]
             }
-          }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Patients",
+      "item": [
+        {
+          "name": "Get All Patients",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/patients",
+              "host": ["{{base_url}}"],
+              "path": ["patients"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Patient",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 30\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/patients",
+              "host": ["{{base_url}}"],
+              "path": ["patients"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Medicines",
+      "item": [
+        {
+          "name": "Get All Medicines",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicines",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicines"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Medicines (Filtered)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicines?status=available&location=Nablus",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicines"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "available"
+                },
+                {
+                  "key": "location",
+                  "value": "Nablus"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Available Medicines",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicines/available",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicines", "available"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Medicine by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/medicines/{{medicine_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicines", "{{medicine_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Medicine",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Paracetamol 500mg\",\n  \"quantity\": 100,\n  \"location\": \"Nablus Central Pharmacy\",\n  \"status\": \"available\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/medicines",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicines"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Medicine",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 150,\n  \"status\": \"available\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/medicines/{{medicine_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicines", "{{medicine_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Medicine",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/medicines/{{medicine_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "medicines", "{{medicine_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Equipment",
+      "item": [
+        {
+          "name": "Get All Equipment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/equipment",
+              "host": ["{{base_url}}"],
+              "path": ["api", "equipment"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Available Equipment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/equipment/available",
+              "host": ["{{base_url}}"],
+              "path": ["api", "equipment", "available"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Equipment by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/equipment/{{equipment_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "equipment", "{{equipment_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Equipment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Wheelchair\",\n  \"quantity\": 5,\n  \"location\": \"Nablus Rehabilitation Center\",\n  \"status\": \"available\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/equipment",
+              "host": ["{{base_url}}"],
+              "path": ["api", "equipment"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Equipment",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantity\": 8,\n  \"status\": \"available\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/equipment/{{equipment_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "equipment", "{{equipment_id}}"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Equipment",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/equipment/{{equipment_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "equipment", "{{equipment_id}}"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Matching & Reservations",
+      "item": [
+        {
+          "name": "Find Matches",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"itemType\": \"medicine\",\n  \"itemName\": \"Paracetamol\",\n  \"quantity\": 10,\n  \"location\": \"Nablus\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/matching",
+              "host": ["{{base_url}}"],
+              "path": ["api", "matching"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reserve Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"itemId\": 1,\n  \"quantity\": 10\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/matching/reserve",
+              "host": ["{{base_url}}"],
+              "path": ["api", "matching", "reserve"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Inventory",
+      "item": [
+        {
+          "name": "Get Inventory Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/inventory/stats",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory", "stats"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Item Quantity",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quantityChange\": 50\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/inventory/{{item_id}}/quantity",
+              "host": ["{{base_url}}"],
+              "path": ["api", "inventory", "{{item_id}}", "quantity"]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -430,16 +503,15 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"doctor_id\": 2,\n  \"patient_id\": 1,\n  \"type\": \"video\",\n  \"date\": \"2025-11-28T10:00:00\",\n  \"notes\": \"Initial check-up\"\n}"
+              "raw": "{\n  \"doctor_id\": 2,\n  \"patient_id\": 1,\n  \"type\": \"video\",\n  \"date\": \"2025-12-15T10:00:00\",\n  \"notes\": \"Initial check-up\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/consultations",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","consultations"]
+              "raw": "{{base_url}}/api/consultations",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultations"]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "Get All Consultations",
@@ -452,13 +524,12 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/api/consultations",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","consultations"]
+              "raw": "{{base_url}}/api/consultations",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultations"]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "Get Consultation by ID",
@@ -471,13 +542,12 @@
               }
             ],
             "url": {
-              "raw": "http://localhost:3000/api/consultations/1",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","consultations","1"]
+              "raw": "{{base_url}}/api/consultations/{{consultation_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "consultations", "{{consultation_id}}"]
             }
-          }
+          },
+          "response": []
         }
       ]
     },
@@ -499,13 +569,12 @@
               "raw": "{\n  \"text\": \"مرحبا دكتور\",\n  \"target\": \"en\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/translate",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","translate"]
+              "raw": "{{base_url}}/api/translate",
+              "host": ["{{base_url}}"],
+              "path": ["api", "translate"]
             }
-          }
+          },
+          "response": []
         }
       ]
     },
@@ -527,13 +596,12 @@
               "raw": "{\n  \"to\": \"user@example.com\",\n  \"subject\": \"Reminder\",\n  \"message\": \"Your consultation is scheduled tomorrow\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/notify/email",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","notify","email"]
+              "raw": "{{base_url}}/api/notify/email",
+              "host": ["{{base_url}}"],
+              "path": ["api", "notify", "email"]
             }
-          }
+          },
+          "response": []
         },
         {
           "name": "Send SMS Notification",
@@ -550,21 +618,46 @@
               "raw": "{\n  \"to\": \"+970599123456\",\n  \"message\": \"Your consultation is scheduled tomorrow\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/api/notify/sms",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "3000",
-              "path": ["api","notify","sms"]
+              "raw": "{{base_url}}/api/notify/sms",
+              "host": ["{{base_url}}"],
+              "path": ["api", "notify", "sms"]
             }
-          }
+          },
+          "response": []
         }
       ]
     }
   ],
   "variable": [
     {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
       "key": "token",
-      "value": ""
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "medicine_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "equipment_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "consultation_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "item_id",
+      "value": "1",
+      "type": "string"
     }
   ]
 }
