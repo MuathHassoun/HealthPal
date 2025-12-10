@@ -1,188 +1,158 @@
 # HealthPal
 
-HealthPal is a full-stack health-care project (demo/prototype) that provides patient management, consultations, alerts, donations and mental-support features. This repository contains an Express + Sequelize backend and a Next.js frontend. The work includes a centralized API client, custom React hooks, tests, and Postman collection for API testing.
+HealthPal is a **full-stack health-care prototype** that provides essential features for patient management, consultations, alerts, donations, and mental-support services.
 
-This README covers how to set up, run, test, and use the project locally.
+This repository contains:
+
+- A **Backend API**: Built with **Node.js (Express)** and **Sequelize ORM**.
+- A **Frontend Application**: Built with **Next.js**, **React**, and **Tailwind CSS**.
+
+The project includes a centralized API client, custom React hooks, extensive Jest test suite, and a ready-to-use Postman collection.
 
 ---
 
 ## Table of Contents
-- Project overview
-- Prerequisites
-- Quick start
-- Development (backend & frontend)
-- Testing
-- API overview
-- Postman collection
-- Environment variables
-- Troubleshooting
-- Contributing
-- License
+
+- [1. Project Overview](#1-project-overview)
+- [2. Prerequisites](#2-prerequisites)
+- [3. Quick Start (Local Development)](#3-quick-start-local-development)
+- [4. API Overview](#4-api-overview)
+- [5. Testing](#5-testing)
+- [6. Environment Variables](#6-environment-variables)
+- [7. Postman Collection](#7-postman-collection)
+- [8. Troubleshooting & Useful Commands](#8-troubleshooting--useful-commands)
+- [9. Contribution](#9-contribution)
+- [10. License](#10-license)
 
 ---
 
-## Project overview
+## 1. Project Overview
 
-- Backend: Node.js (Express), Sequelize ORM. Uses SQLite for tests and MySQL/other for production (configurable in `src/config/env.js`).
-- Frontend: Next.js, React, Tailwind CSS. Centralized API client in `frontend/lib/apiClient.js` and hooks in `frontend/hooks/useAPI.js`.
-- Tests: Jest with in-memory SQLite for fast unit/integration tests.
+The project is structured into two main directories, reflecting the decoupled architecture.
 
-This repository contains both backend and frontend code. Top-level server lives in `src/` and frontend app in `frontend/`.
-
-## Prerequisites
-
-- Node.js 18+ (Node 20 tested here)
-- npm (or yarn)
-- Optional: MySQL for production usage (the default development uses local DB configs or in-memory for tests)
-
-## Quick start (development)
-
-Open two terminals.
-
-Terminal 1 — Backend
-```bash
-cd /home/muath-hassoun/PhpstormProjects/HealthPal
-npm install
-npm start
-```
-
-Terminal 2 — Frontend
-```bash
-cd /home/muath-hassoun/PhpstormProjects/HealthPal/frontend
-npm install
-npm run dev
-```
-
-Frontend URL: http://localhost:3000
-Backend API base: http://localhost:5000/api
-
-If Next.js chooses an alternate port because 3000 is busy, the terminal output will show the actual URL (e.g. `http://localhost:3001`).
-
-## Development details
-
-Backend
-- Entry point: `src/server.js` (starts the Express app after DB connect)
-- App: `src/app.js` (routes & middleware)
-- Routes: `src/routes/` (users, consultations, alerts, mental-support, etc.)
-- Models: `src/models/` (Sequelize models)
-
-Frontend
-- Entry: `frontend/pages/` (Next.js pages)
-- Layout: `frontend/components/Layout.js`
-- API client: `frontend/lib/apiClient.js`
-- Hooks: `frontend/hooks/useAPI.js`
-
-## Tests
-
-Run backend tests from the project root:
-```bash
-npm test
-```
-
-This runs Jest. The test suite is configured to use a shared in-memory SQLite instance to avoid concurrency issues during tests.
-
-## API overview (common endpoints)
-
-Base: `http://localhost:5000/api`
-
-- Auth
-	- POST `/api/users/signup` — register (body: `{ full_name, email, password, role? }`)
-	- POST `/api/users/login` — login (body: `{ email, password }`)
-	- GET `/api/users/profile` — profile (requires auth JWT)
-
-- Users / Patients
-	- GET `/api/users/patients` — list patients
-	- GET `/api/users/patients/:id` — patient detail
-
-- Consultations
-	- GET `/api/consultations`
-	- POST `/api/consultations` — create (body sample: `{ doctor_id, patient_id, type, scheduled_at, notes }`)
-
-- Alerts
-	- GET `/api/alerts`
-
-- Mental Support
-	- GET `/api/mental-support`
-	- POST `/api/mental-support` — create support request
-
-- Donations
-	- GET `/api/donations`
-
-Note: See `src/routes/` and `src/controllers/` for full route list and payload examples.
-
-## Postman collection
-
-There is a Postman collection included that you can import for manual testing and documentation: `src/postman/postman_collection.json`.
-
-Recommended Postman environment variables (create an environment named `HealthPal Local`):
-- `base_url` = `http://localhost:5000/api`
-- `auth_token` = (leave blank initially)
-
-To import in Postman
-1. Open Postman → Import → Choose Files → select `src/postman/postman_collection.json`.
-2. Create environment and set `base_url`.
-3. Use the `auth_token` variable to set `Authorization: Bearer {{auth_token}}` where needed.
-
-## Environment variables
-
-Backend (`.env` or system env):
-- `PORT` — server port (default: 5000)
-- `JWT_SECRET` — secret key used to sign JWT tokens (change in production)
-- DB configuration is controlled in `src/config/env.js`.
-
-Frontend `.env.local` (frontend root):
-- `NEXT_PUBLIC_API_BASE_URL` — API base URL (default: `http://localhost:5000/api`)
-
-## Troubleshooting
-
-- NetworkError / JSON.parse error: If the frontend fails with `unexpected character` while parsing JSON, check the API URL (must point to backend) and verify the endpoint returns JSON. Use `curl` to verify:
-	```bash
-	curl -i -X GET http://localhost:5000/api/users/patients
-	```
-- CORS issues: Backend includes CORS middleware; ensure `FRONTEND_URL` or `http://localhost:3000` is allowed.
-- Port conflicts: If port 3000 or 5000 are in use, either stop the conflicting process or let Next.js choose an alternate port. For port cleanup:
-	```bash
-	# Kill process listening on 3000
-	lsof -i :3000 | awk 'NR>1 {print $2}' | xargs -r kill -9
-	```
-- DB connection issues: Check `src/config/env.js` and confirm credentials for production DB. For tests, Jest uses in-memory SQLite.
-
-## Contributing
-
-If you'd like to contribute:
-1. Fork the repo
-2. Create a feature branch
-3. Open a pull request with description and tests
-
-Coding standards: Follow existing code style. Many files use ES Modules (import/export) and modern JS.
-
-## Useful commands
-
-```bash
-# Backend
-npm install
-npm start
-
-# Frontend (from repo root)
-cd frontend
-npm install
-npm run dev
-
-# Tests
-npm test
-```
-
-## Where to look next
-
-- API routes & controllers: `src/routes/`, `src/controllers/`
-- Frontend pages: `frontend/pages/`
-- API client & hooks: `frontend/lib/apiClient.js`, `frontend/hooks/useAPI.js`
-- Postman collection: `src/postman/postman_collection.json`
+| Component | Directory | Technology Stack | Details |
+|:----------|:----------|:-----------------|:--------|
+| **Backend API** | `src/` | Node.js (Express), Sequelize ORM | Entry point: `src/server.js`. Uses SQLite for development/tests. |
+| **Frontend UI** | `frontend/` | Next.js, React, Tailwind CSS | Client in `frontend/lib/apiClient.js`. Hooks in `frontend/hooks/useAPI.js`. |
 
 ---
 
-If you'd like, I can also add a Postman environment file, expand the collection to include example bodies for each endpoint, or generate an OpenAPI (Swagger) spec from routes.
+## 2. Prerequisites
+
+You must have the following installed to run the project locally:
+
+- **Node.js 18+** (Node 20 is tested and recommended)
+- **npm** (or yarn)
+- **Git**
 
 ---
 
-© 2025 HealthPal
+## 3. Quick Start (Local Development)
+
+Follow these steps in two separate terminals to start the full application.
+
+### Terminal 1: Backend API
+
+1. Navigate to the project root and install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the Express server:
+   ```bash
+   npm start
+   ```
+   
+   The Backend API should be running at: **`http://localhost:5000/api`**
+
+### Terminal 2: Frontend UI
+
+1. Navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+2. Start the Next.js development server:
+   ```bash
+   npm run dev
+   ```
+   
+   The Frontend application should be accessible at: **`http://localhost:3000`**
+
+---
+
+## 4. API Overview
+
+The API is the central hub for all application data. Base URL for all endpoints is `http://localhost:5000/api`.
+
+| Module | Endpoint | Method | Access | Description |
+|:-------|:---------|:-------|:-------|:------------|
+| **Auth** | `/users/signup` | `POST` | Public | Register new user (`full_name`, `email`, `password`, `role?`). |
+| **Auth** | `/users/login` | `POST` | Public | Authenticate and receive **JWT token**. |
+| **Auth** | `/users/profile` | `GET` | **Auth** | Get user profile (requires **JWT**). |
+| **Users** | `/users/patients` | `GET` | **Auth** | List all patient profiles. |
+| **Consultations** | `/consultations` | `POST` | **Auth** | Create a new consultation. |
+| **Alerts** | `/alerts` | `GET` | Public | Retrieve active health alerts. |
+| **Donations** | `/donations` | `GET` | Public | List active donation campaigns. |
+| **Support** | `/mental-support` | `POST` | **Auth** | Create a new mental support request. |
+
+> **For full details** on request bodies and payloads, see the documentation in `src/routes/` and `src/controllers/`.
+
+---
+
+## 5. Testing
+
+The project uses **Jest** for all testing, configured to use a fast, **in-memory SQLite database** to isolate tests and prevent conflicts.
+
+- Run all backend tests from the project root:
+  ```bash
+  npm test
+  ```
+
+---
+
+## 6. Environment Variables
+
+Configuration is handled via environment variables.
+
+| Variable | Location | Default Value | Purpose |
+|:---------|:---------|:--------------|:--------|
+| `PORT` | Backend (`.env` or system) | `5000` | Server port. |
+| `JWT_SECRET` | Backend (`.env` or system) | *Required* | Secret key for signing and verifying JWTs (**MUST be changed in production**). |
+| `NEXT_PUBLIC_API_BASE_URL` | Frontend (`frontend/.env.local`) | `http://localhost:5000/api` | API endpoint for the frontend client. |
+
+> Database configuration (for production/staging) is handled within `src/config/env.js`.
+
+---
+
+## 7. Postman Collection
+
+A Postman collection is provided for easy manual testing and exploration of the API endpoints.
+
+1. **Import:** Import the file `src/postman/postman_collection.json` into Postman.
+
+2. **Environment Setup:** Create a new Postman environment named `HealthPal Local` and set these variables:
+   - `base_url` = `http://localhost:5000/api`
+   - `auth_token` = (leave blank; this will be set dynamically after logging in)
+
+3. **Usage:** Endpoints requiring authorization use the `Authorization: Bearer {{auth_token}}` header. Run the `/users/login` endpoint first to obtain the token.
+
+---
+
+## 8. Troubleshooting & Useful Commands
+
+| Issue | Solution / Check | Command (If Applicable) |
+|:------|:-----------------|:------------------------|
+| **CORS Error** | Ensure both Frontend (`http://localhost:3000`) and Backend (`http://localhost:5000`) are running correctly. | N/A |
+| **JSON Error** | Verify the API endpoint returns valid JSON. Check the network status code. | `curl -i http://localhost:5000/api/users/patients` |
+| **Port Conflict** | Kill the process running on the conflicted port (e.g., 3000 or 5000). | `lsof -i :5000 \| awk 'NR>1 {print $2}' \| xargs -r kill -9` |
+| **DB Issues (Prod)** | Check `src/config/env.js` and production credentials. Local development uses SQLite. | N/A |
+
+### Useful Commands
+
+| Command | Purpose | Location |
+|:--------|:--------|:---------|
+| `npm start` | Starts the Express Backend server. | Project Root |
+| `npm run dev` | Starts the Next.js Frontend server. | `frontend/` |
+| `npm test` | Runs all Jest unit and integration tests. | Project Root |
