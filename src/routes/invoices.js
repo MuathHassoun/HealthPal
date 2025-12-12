@@ -1,5 +1,4 @@
-//the other  : yazan jamal
-
+// src/routes/invoices.js
 import express from 'express';
 import {
     createInvoice,

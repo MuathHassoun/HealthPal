@@ -1,3 +1,4 @@
+// src/routes/medication.routes.js
 import express from 'express';
 import medicationController from '../controllers/medication.controller.js';
 

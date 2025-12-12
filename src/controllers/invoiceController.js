@@ -1,5 +1,4 @@
-//the other : yazan jamal
-
+// src/controllers/invoiceController.js
 import Invoice from '../models/Invoice.js';
 
 export const createInvoice = async (req, res) => {

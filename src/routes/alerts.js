@@ -1,3 +1,4 @@
+// src/routes/alerts.js
 import express from 'express';
 import {
     createAlert,

@@ -1,5 +1,4 @@
-//the other : yazan jamal
-
+// src/routes/donations.js
 import express from 'express';
 import {
     createDonation,

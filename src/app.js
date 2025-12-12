@@ -1,3 +1,4 @@
+// src/app.js
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -12,6 +13,9 @@ import supportSessionRoutes from './routes/supportSession.js';
 import consultationRoutes from './routes/consultation.js';
 import userRoutes from './routes/user.js';
 import medicationRoutes from './routes/medication.routes.js';
+import sponsorshipsRoutes from './routes/sponsorships.js';
+import donationsRoutes from './routes/donations.js';
+import invoicesRoutes from './routes/invoices.js';
 
 const app = express();
 
@@ -94,6 +98,9 @@ app.use('/api/mental-support', supportSessionRoutes);
 app.use('/api/consultations', consultationRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api', medicationRoutes);
+app.use('/api/sponsorships', sponsorshipsRoutes); // Sponsorships shares the same routes as medications for now
+app.use('/api/donations', donationsRoutes);
+app.use('/api/invoices', invoicesRoutes);
 
 // ============ ERROR HANDLING ============
 

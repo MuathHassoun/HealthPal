@@ -1,5 +1,4 @@
-// the other : yazan jamal
-
+// src/routes/sponsorships.js
 import express from 'express';
 import {
     createSponsorship,

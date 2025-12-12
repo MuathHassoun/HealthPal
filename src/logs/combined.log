@@ -102,3 +102,141 @@
 {"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-05 14:13:05","url":"/api/inventory/stats","userAgent":"PostmanRuntime/7.49.1"}
 {"level":"info","message":"Inventory statistics retrieved","service":"healthpal-backend","stats":{"equipment":{"totalItems":3,"totalQuantity":25},"medicines":{"totalItems":2,"totalQuantity":190}},"timestamp":"2025-12-05 14:13:06"}
 {"level":"info","message":"\u001b[0mGET /api/inventory/stats \u001b[32m200\u001b[0m 757.533 ms - 178\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-05 14:13:06"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 19:13:36"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 19:13:44"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:13:59","url":"/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:13:59","url":"/patients"}
+{"level":"info","message":"\u001b[0mGET /patients \u001b[33m404\u001b[0m 4.580 ms - 59\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:13:59"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:15:01","url":"/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:15:01","url":"/patients"}
+{"level":"info","message":"\u001b[0mGET /patients \u001b[33m404\u001b[0m 1.689 ms - 59\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:15:01"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:15:20","url":"/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:15:20","url":"/patients"}
+{"level":"info","message":"\u001b[0mGET /patients \u001b[33m404\u001b[0m 1.198 ms - 59\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:15:20"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 19:15:40"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 19:15:48"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:16:12","url":"/api/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:16:12","url":"/api/patients"}
+{"level":"info","message":"\u001b[0mGET /api/patients \u001b[33m404\u001b[0m 4.926 ms - 63\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:16:12"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:16:41","url":"/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:16:41","url":"/patients"}
+{"level":"info","message":"\u001b[0mGET /patients \u001b[33m404\u001b[0m 1.782 ms - 59\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:16:41"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 19:21:30","url":"/api/users/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/users/patients \u001b[32m200\u001b[0m 1826.691 ms - 112\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:21:32"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 19:22:26","url":"/api/users/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 19:22:26","url":"/api/users/patients"}
+{"level":"info","message":"\u001b[0mPOST /api/users/patients \u001b[33m404\u001b[0m 2.072 ms - 70\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:22:26"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 19:22:53","url":"/api/users/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 19:22:53","url":"/api/users/patients"}
+{"level":"info","message":"\u001b[0mPOST /api/users/patients \u001b[33m404\u001b[0m 1.128 ms - 70\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 19:22:53"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:04:42","url":"/api/users/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:04:42","url":"/api/users/patients"}
+{"level":"info","message":"\u001b[0mPOST /api/users/patients \u001b[33m404\u001b[0m 1.128 ms - 70\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:04:42"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:04:43","url":"/api/users/patients","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:04:43","url":"/api/users/patients"}
+{"level":"info","message":"\u001b[0mPOST /api/users/patients \u001b[33m404\u001b[0m 1.238 ms - 70\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:04:43"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:09:39","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:09:39","url":"/api/users/create/patient"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[33m404\u001b[0m 0.955 ms - 76\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:09:39"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:10:38","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:10:38","url":"/api/users/create/patient"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[33m404\u001b[0m 0.964 ms - 76\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:10:38"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:11:47","url":"/api/users/signup","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/signup \u001b[32m201\u001b[0m 651.103 ms - 300\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:11:47"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:11:51","url":"/api/users/login","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/login \u001b[32m200\u001b[0m 182.433 ms - 288\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:11:52"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 20:11:55","url":"/api/users/profile","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/users/profile \u001b[32m200\u001b[0m 65.694 ms - 141\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:11:55"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:15:50","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:15:50","url":"/api/users/create/patient"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[33m404\u001b[0m 0.985 ms - 76\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:15:50"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:16:14","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:16:14","url":"/api/users/create/patient"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[33m404\u001b[0m 1.282 ms - 76\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:16:14"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 20:16:43"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 20:16:54"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:16:58","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 290.384 ms - 35\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:16:58"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 20:18:39"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 20:18:50"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:19:03","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 916.656 ms - 114\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:19:04"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 20:20:58"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 20:21:09"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 20:28:21"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 20:28:33"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:28:51","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 865.797 ms - 114\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:28:52"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:29:03","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 458.608 ms - 114\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:29:03"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 20:31:00"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 20:31:09"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:31:37","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 1046.462 ms - 114\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:31:38"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:32:52","url":"/api/sponsorships","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:32:52","url":"/api/sponsorships"}
+{"level":"info","message":"\u001b[0mPOST /api/sponsorships \u001b[33m404\u001b[0m 1.645 ms - 68\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:32:52"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:33:28","url":"/api/donations","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 20:33:28","url":"/api/donations"}
+{"level":"info","message":"\u001b[0mPOST /api/donations \u001b[33m404\u001b[0m 1.208 ms - 65\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:33:28"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 20:34:14","url":"/api/sponsorships","userAgent":"PostmanRuntime/7.49.1"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 20:34:14","url":"/api/sponsorships"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships \u001b[33m404\u001b[0m 0.926 ms - 67\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 20:34:14"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 21:30:48"}
+{"error":"Disk got full writing 'information_schema.(temporary)' (Errcode: 28 \"No space left on device\")","level":"error","message":"Failed to start server","service":"healthpal-backend","timestamp":"2025-12-11 21:30:48"}
+{"level":"info","message":"Database connected successfully","service":"healthpal-backend","timestamp":"2025-12-11 22:20:51"}
+{"level":"info","message":"Server started on port 3000","service":"healthpal-backend","timestamp":"2025-12-11 22:21:01"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:21:05","url":"/api/sponsorships","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships \u001b[32m200\u001b[0m 71.621 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:21:05"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 22:21:24","url":"/api/donations","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/donations \u001b[33m404\u001b[0m 402.635 ms - 33\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:21:25"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:21:40","url":"/api/sponsorships","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships \u001b[32m200\u001b[0m 394.906 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:21:40"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:22:21","url":"/api/sponsorships?status=active&patientId=1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships?status=active&patientId=1 \u001b[32m200\u001b[0m 412.366 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:22:21"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:23:21","url":"/api/invoices","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/invoices \u001b[32m200\u001b[0m 382.534 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:23:21"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 22:24:57","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 448.329 ms - 114\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:24:58"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 22:26:25","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 475.907 ms - 114\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:26:26"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:27:28","url":"/api/invoices","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/invoices \u001b[32m200\u001b[0m 370.710 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:27:28"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:32:30","url":"/api/sponsorships/1/dashboard","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships/1/dashboard \u001b[33m404\u001b[0m 405.356 ms - 33\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:32:31"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:32:41","url":"/api/sponsorships/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships/1 \u001b[33m404\u001b[0m 390.067 ms - 33\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:32:42"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:33:05","url":"/api/sponsorships?status=active&patientId=1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships?status=active&patientId=1 \u001b[32m200\u001b[0m 1286.394 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:33:06"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:33:11","url":"/api/sponsorships/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships/1 \u001b[33m404\u001b[0m 468.304 ms - 33\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:33:12"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:35:34","url":"/api/sponsorships/%7Bsponsorship_id%7D/dashboard","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/sponsorships/%7Bsponsorship_id%7D/dashboard \u001b[33m404\u001b[0m 665.146 ms - 33\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:35:35"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"DELETE","service":"healthpal-backend","timestamp":"2025-12-11 22:38:19","url":"/api/sponsorships/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mDELETE /api/sponsorships/1 \u001b[33m404\u001b[0m 402.693 ms - 33\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:38:19"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"PUT","service":"healthpal-backend","timestamp":"2025-12-11 22:38:24","url":"/api/sponsorships/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPUT /api/sponsorships/1 \u001b[33m404\u001b[0m 64.879 ms - 33\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:38:24"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:39:18","url":"/api/donations","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/donations \u001b[32m200\u001b[0m 401.729 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:39:18"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 22:39:44","url":"/api/donations?sponsorshipId=1&donorId=2","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/donations?sponsorshipId=1&donorId=2 \u001b[32m200\u001b[0m 389.515 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:39:44"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"DELETE","service":"healthpal-backend","timestamp":"2025-12-11 22:41:32","url":"/api/donations/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mDELETE /api/donations/1 \u001b[33m404\u001b[0m 374.111 ms - 30\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:41:32"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 22:41:59","url":"/api/sponsorships","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/sponsorships \u001b[31m500\u001b[0m 816.491 ms - 234\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:41:59"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 22:42:12","url":"/api/users/create/patient","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/users/create/patient \u001b[31m500\u001b[0m 467.463 ms - 114\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 22:42:13"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"POST","service":"healthpal-backend","timestamp":"2025-12-11 23:13:47","url":"/api/invoices","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPOST /api/invoices \u001b[31m500\u001b[0m 550.055 ms - 232\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 23:13:47"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 23:13:57","url":"/api/invoices","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/invoices \u001b[32m200\u001b[0m 65.072 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 23:13:57"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 23:14:17","url":"/api/invoices?sponsorshipId=1&status=paid","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/invoices?sponsorshipId=1&status=paid \u001b[32m200\u001b[0m 523.619 ms - 2\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 23:14:18"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 23:14:37","url":"/api/invoices/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/invoices/1 \u001b[33m404\u001b[0m 421.404 ms - 29\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 23:14:37"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"DELETE","service":"healthpal-backend","timestamp":"2025-12-11 23:15:36","url":"/api/invoices/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mDELETE /api/invoices/1 \u001b[33m404\u001b[0m 895.689 ms - 29\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 23:15:37"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"PUT","service":"healthpal-backend","timestamp":"2025-12-11 23:15:40","url":"/api/invoices/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mPUT /api/invoices/1 \u001b[33m404\u001b[0m 108.438 ms - 29\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 23:15:41"}
+{"ip":"::1","level":"info","message":"Incoming request","method":"GET","service":"healthpal-backend","timestamp":"2025-12-11 23:15:44","url":"/api/invoices/1","userAgent":"PostmanRuntime/7.49.1"}
+{"level":"info","message":"\u001b[0mGET /api/invoices/1 \u001b[33m404\u001b[0m 62.711 ms - 29\u001b[0m","service":"healthpal-backend","timestamp":"2025-12-11 23:15:44"}

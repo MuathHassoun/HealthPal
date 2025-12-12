@@ -187,6 +187,27 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Table structure for table `invoices`
+--
+
+CREATE TABLE `invoices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sponsorship_id` int(11) NOT NULL,
+  `donation_id` int(11) DEFAULT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `issued_at` datetime DEFAULT current_timestamp(),
+  `status` enum('pending','paid','cancelled') DEFAULT 'pending',
+  `document_url` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sponsorship_id` (`sponsorship_id`),
+  KEY `donation_id` (`donation_id`),
+  CONSTRAINT `invoices_ibfk_1` FOREIGN KEY (`sponsorship_id`) 
+    REFERENCES `sponsorships` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `invoices_ibfk_2` FOREIGN KEY (`donation_id`) 
+    REFERENCES `donations` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
 -- Indexes for dumped tables
 --
 

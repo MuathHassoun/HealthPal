@@ -1,3 +1,4 @@
+// src/server.js
 import app from './app.js';
 import { connectDB, sequelize } from './config/db.js';
 import logger from './config/logger.js';
@@ -21,10 +22,10 @@ const startServer = async () => {
         // Start server
         app.listen(PORT, () => {
             logger.info(`Server started on port ${PORT}`);
-            console.log(`🚀 Server running on port ${PORT}`);
-            console.log(`📊 Health check: http://localhost:${PORT}/health`);
-            console.log(`💊 Medicines API: http://localhost:${PORT}/api/medicines`);
-            console.log(`🏥 Equipment API: http://localhost:${PORT}/api/equipment`);
+            console.log(`Server running on port ${PORT}`);
+            console.log(`Health check: http://localhost:${PORT}/health`);
+            console.log(`Medicines API: http://localhost:${PORT}/api/medicines`);
+            console.log(`Equipment API: http://localhost:${PORT}/api/equipment`);
         });
     } catch (error) {
         logger.error('Failed to start server', { error: error.message });
